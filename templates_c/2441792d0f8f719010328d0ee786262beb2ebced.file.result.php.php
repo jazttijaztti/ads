@@ -1,4 +1,29 @@
-  <!doctype html>
+<?php /* Smarty version Smarty-3.1.13, created on 2015-06-16 09:33:26
+         compiled from "tpl/result.php" */ ?>
+<?php /*%%SmartyHeaderCode:2122533974557fd124d7fc76-60986095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2441792d0f8f719010328d0ee786262beb2ebced' => 
+    array (
+      0 => 'tpl/result.php',
+      1 => 1434440004,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2122533974557fd124d7fc76-60986095',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_557fd124da0ac6_10403837',
+  'variables' => 
+  array (
+    'statics_url' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_557fd124da0ac6_10403837')) {function content_557fd124da0ac6_10403837($_smarty_tpl) {?><!doctype html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -12,17 +37,18 @@
 <meta property="og:image" content=" ">
 <meta property="og:site_name" content=" ">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['statics_url']->value;?>
+/common/css/style.css" media="all">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
-<?php
+<<?php ?>?php
   $webroot = $_SERVER['DOCUMENT_ROOT'];
   include( $webroot."/common/include/header.php" );
-?>
+?<?php ?>>
 <!-- ▲▲▲▲▲ COMMON_HEADER ▲▲▲▲▲ -->
   
 <main>
@@ -100,9 +126,10 @@
 </main>
   
 <!-- ▼▼▼▼▼ COMMON_FOOTER ▼▼▼▼▼ -->
-<?php
+<<?php ?>?php
   include( $webroot."/common/include/footer.php" );
-?>
+?<?php ?>>
 <!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
 </body>
 </html>
+<?php }} ?>

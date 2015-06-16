@@ -1,4 +1,4 @@
-  <!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 <meta property="og:image" content=" ">
 <meta property="og:site_name" content=" ">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
+<link rel="stylesheet" href="{%$statics_url%}/common/css/style.css" media="all">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>

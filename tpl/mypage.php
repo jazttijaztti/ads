@@ -1,8 +1,8 @@
-  <!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>マイページ1</title>
+<title>マイページ</title>
 <meta name="description" content="検索エンジンの検索結果に表示されるディスクリプションの文字数は最大124文字程度、SEO的な考えからすると64文字程度です。">
 <meta name="Keywords" content="平均,7個とか,SEOには,効果ないとか,でも入れといたほうがいいとか,">
 <meta name="viewport" content="width=1024">
@@ -12,19 +12,20 @@
 <meta property="og:image" content=" ">
 <meta property="og:site_name" content=" ">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
+<link rel="stylesheet" href="{%$statics_url%}/common/css/style.css" media="all">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
+
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
 <?php
   $webroot = $_SERVER['DOCUMENT_ROOT'];
   include( $webroot."/common/include/header.php" );
 ?>
 <!-- ▲▲▲▲▲ COMMON_HEADER ▲▲▲▲▲ -->
-  
+
 <main>
   
   <section id="reslut_prof_wrap">
@@ -38,6 +39,12 @@
       </div><!-- img -->
     </div><!-- .inner -->
   </section><!-- reslut_prof_wrap -->
+  
+  <section id="btn_area">
+    <div class="inner">
+      <a href="question.php" id="btn_style">診断スタート！</a>
+    </div><!-- inner -->
+  </section><!-- section_btn -->
   
   <section id="result_parson_wrap">
     <div class="good inner">
@@ -89,14 +96,6 @@
     </div><!-- bad -->
 
   </div><!-- result_parson_wrap -->
-
-  <section id="btn_area">
-    <div class="inner">
-      <a href="mypage.php" id="btn_style">マイページへ</a>
-    </div><!-- inner -->
-  </section><!-- section_btn -->
-
-
 </main>
   
 <!-- ▼▼▼▼▼ COMMON_FOOTER ▼▼▼▼▼ -->

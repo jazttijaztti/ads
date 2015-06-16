@@ -1,328 +1,128 @@
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>大事なワードは28文字以内に。平均32文字程度に。</title>
-<meta name="description" content="検索エンジンの検索結果に表示されるディスクリプションの文字数は最大124文字程度、SEO的な考えからすると64文字程度です。">
-<meta name="Keywords" content="平均,7個とか,SEOには,効果ないとか,でも入れといたほうがいいとか,">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no,address=no,email=no">
- <meta property="og:type" content="website"><!--http://www.inventory.co.jp/labo/facebook/facebook-open-graph-protocol-ogtype.html ここに全種類サンプル-->
-<meta property="og:title" content=" ">
-<meta property="og:image" content=" ">
-<meta property="og:site_name" content=" ">
-<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-<script>
-$(function(){
-  var box = $(".box");
-  var box_len = $(box).length;
-  $("#counter").find("span").text(box_len);
-  
-  var radio = $(box).find("input[type='radio']");
-  
-  $(radio).on("change",function(){
-    var radio_checked = $(box).find("input[type='radio']:checked").size();
-    $("#counter").find("span").text(box_len-radio_checked);
-  });
-});
-</script>
-
-
-</head>
-
-<body>
-<!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
 <?php
-  $webroot = $_SERVER['DOCUMENT_ROOT'];
-  include( $webroot."/common/include/header.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_HEADER ▲▲▲▲▲ -->
-  
-<main>
-  
-  <section id="question_wrap">
-    
-  <h1>診断スタート！</h1>
-  
-  <p id="counter">残り<span>50</span>問</p>
-    <form action="result.php">
-      
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q1" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q1" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+$base_url = 'http://local.ads.com';
+$statics_url = $base_url.'/statics/';
+require_once('libralies/smarty/Smarty.class.php');
+/**
+require_once('fb/facebook.php');
+require_once('class/tool/content.php');
+require_once('class/tool/login.php');
+require_once('class/db/select.php');
+require_once('class/db/insert.php');
+require_once('class/db/update.php');
+**/
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q2" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q2" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q3" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q3" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+header("Content-Type: text/html; charset=UTF-8");
+$smarty = new Smarty;
+//$select = new Select;
+$smarty->left_delimiter  = "{%";
+$smarty->right_delimiter = "%}";
+$smarty->assign ('base_url', $base_url);
+$smarty->assign ('statics_url', $statics_url);
+$error ="";
+$smarty->display('tpl/question.php');
+exit;
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q4" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q4" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+/*
+ * FBコードを持っているかどうかで質問ページに飛ばすかログインページに飛ばすかを判断する
+ * もしFBコードを持っていたらFBコードを使いアクセストークンを取得する
+ * そのあとDBを見て同じfb_idがあったらトークンは更新しloginindexにリダイレクトする
+ * おなじfb_idがなかったらinsertしてloginindexにリダイレクトする
+ *
+ */
+	//■そもそも連携をディスられた場合
+	$config = array(
+	    'appId'  => '2629070500000000071094513',
+	    'secret' => 'cisdfsaf48e904bd071bf1c5f068653eaedb930',
+		'cookie' => true
+	);
+	$facebook = new Facebook($config);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q5" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q5" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q6" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q6" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+	if(isset($_GET['error']) and $_GET['error'] == 'access_denied') {
+		//アクセスを拒否された場合
+		//未ログインならログイン URL を取得してリンクを出力
+		$params = array(//'display'=>'popup',
+						'redirect_uri' => 'http://local.ads.com/question.php',
+						'scope' => 'email,publish_stream,user_photos,photo_upload,read_friendlists,user_work_history,manage_pages'
+					);
+		$loginUrl = $facebook->getLoginUrl($params);
+		$smarty->assign ('error', 'FBからのアクセスを許可しない場合こちらのアプリは使用できません。');
+		$smarty->assign ('loginUrl', $loginUrl);
+		$smarty->display('tpl/index.html');
+		exit;
+	}
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q7" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q7" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+	//■本処理
+	if (isset($_GET['code'])) {
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q8" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q8" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$code = $_GET['code'];
+		$callback = 'http://local.ads.com/question.php';
+		$token_url = 'https://graph.facebook.com/oauth/access_token?client_id=262907057194513&redirect_uri=' . urlencode($callback) . '&client_secret=c48e904bd071bf1c5f068653eaedb930&code=' . $code;
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q9" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q9" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$access_token = file_get_contents($token_url);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q10" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q10" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$access_token = preg_replace('/\&.*/', '', $access_token);
+		// ユーザ情報json取得してdecode
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q11" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q11" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$user_json = file_get_contents('https://graph.facebook.com/me?' . $access_token);
+		$fb_user = json_decode($user_json);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q12" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q12" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		// facebook の user_id + name(表示名)をセット
+		$fbUserId    = $fb_user->id;
+		$fbName      = $fb_user->name;
+		$fbEmail     = $fb_user->email;
+		$fbLink      = $fb_user->link;
+		$work        = $fb_user->work;
+		$university  = $fb_user->education;
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q13" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q13" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q14" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q14" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		//FBの設定によってはここがnullで来る可能性がある
+		if ($work != null) {
+			foreach ($work as $key => $val) {
+				$fbCompany .= '/'.$val->employer->name;
+			}
+		} else {
+			$work = '非公開';
+		}
+		if ($university != null) {
+			foreach ($university as $key => $val) {
+				$fbEducation .= '/'.$val->school->name;
+			}
+		} else {
+			$fbEducation = '非公開';
+		}
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q15" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q15" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$fbPic       = 'https://graph.facebook.com/'.$fb_user_id.'/picture?type=large';
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q16" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q16" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		$param = array('fbUserId' => $fbUserId, 'fbName' => $fbName, 'fbEmail' => $fbEmail, 'token' => $access_token , 'fbCompany' => $fbCompany , 'fbEducation' => $fbEducation , 'fbLink' => $fbLink);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q17" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q17" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		//このfb_idがすでにDBにあるのかどうかを調べ、新規ユーザか既存ユーザでinsertかupdateを分ける。
+		$select = new select;
+		$checkAlreadyUserFlg = $select->checkAlreadyUser($fbUserId);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q18" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q18" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		if ($checkAlreadyUserFlg) {
+			//トークン更新
+			$update = new update;
+			$ret = $update->updateToken($param);
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q19" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q19" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		} else {
+		    //新規登録
+			$insert = new insert;
+			$ret = $insert->fbUserInfo($param);
+		}
 
-      <div class="box">
-        <div class="radio">
-          <label class="yes">
-            yes<input type="radio" name="q20" value="1">
-          </label>
-          <label class="no">
-            no<input type="radio" name="q20" value="0">
-          </label>
-        </div><!-- radio --><div class="q_text">
-          <p>ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。ここに質問内容がはいります。</p>
-        </div><!-- q_text -->      
-      </div><!-- box -->      
+		//更新や登録が成功したら質問ページへ
+		if ($ret == false) {
+				header("Location: http://local.ads.com/error=101");
+			exit;
+		} else {
+			header("Location: http://local.ads.com/mypage.php");
+			exit;
+		}
 
-      <section id="btn_area">
-        <input type="submit" value="診断結果へ！" class="submit" id="btn_style">
-      </section><!-- section_btn -->
+	} else {
+	header("Location: http://local.ads.com?error=nocode");
+	exit;
 
-    </form>   
-  </section>
-</main>
-  
-<!-- ▼▼▼▼▼ COMMON_FOOTER ▼▼▼▼▼ -->
-<?php
-  include( $webroot."/common/include/footer.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
-</body>
-</html>
+	}
