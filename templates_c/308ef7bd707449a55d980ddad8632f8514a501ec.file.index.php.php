@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2015-06-17 01:35:35
+<?php /* Smarty version Smarty-3.1.13, created on 2015-06-18 07:40:29
          compiled from "tpl/index.php" */ ?>
 <?php /*%%SmartyHeaderCode:55927562557fcb8b6162e8-01609084%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '308ef7bd707449a55d980ddad8632f8514a501ec' => 
     array (
       0 => 'tpl/index.php',
-      1 => 1434496970,
+      1 => 1434606028,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>トップページ|</title>
+<title>トップページ|test</title>
 <meta name="description" content="検索エンジンの検索結果に表示されるディスクリプションの文字数は最大124文字程度、SEO的な考えからすると64文字程度です。">
 <meta name="Keywords" content="平均,7個とか,SEOには,効果ないとか,でも入れといたほうがいいとか,">
 <meta name="viewport" content="width=1024">
