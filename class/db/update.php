@@ -1,5 +1,5 @@
 <?php
-require_once('dbConnect.php');
+require_once('class/db/dbConnect.php');
 class update extends dbConnect {
 
 

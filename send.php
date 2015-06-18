@@ -19,16 +19,6 @@ $name  = "";
 $error = "";
 
 $param = array();
-//if ($_POST['name']) {
-//	$param['name'] = strip_tags(htmlspecialchars($_POST['fb_name'], ENT_QUOTES, 'UTF-8'));
-//} else {
-//	$error = "name";
-//}
-//if ($_POST['ma']) {
-//	$param['ma'] = strip_tags(htmlspecialchars($_POST['ma'], ENT_QUOTES, 'UTF-8'));
-//} else {
-//	$error = "ma";
-//}
 
 if ($_POST['fbName']) {
 	$param['name'] = strip_tags(htmlspecialchars($_POST['fb_name'], ENT_QUOTES, 'UTF-8'));

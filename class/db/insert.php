@@ -1,5 +1,5 @@
 <?php
-require_once('dbConnect.php');
+require_once('class/db/dbConnect.php');
 class insert extends dbConnect {
 
 	public function registType($params) {

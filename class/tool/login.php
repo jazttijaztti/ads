@@ -1,5 +1,5 @@
 <?php
-require_once('../db/update.php');
+require_once('class/db/update.php');
 class login {
 
 	public function getUserInfo() {
