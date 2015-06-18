@@ -138,44 +138,10 @@ $update  = new update;
 $ret = $update->inputType($param);
 
 
-//■そもそも連携をディスられた場合
-$config = array(
-    'appId'  => '262907057194513',
-    'secret' => 'c48e904bd071bf1c5f068653eaedb930',
-	'cookie' => true
-);
-$facebook = new Facebook($config);
-//友人リストを取得
-
-$friends_list = $facebook->api('/'.$_POST['fb_id'].'/friends');
-$fbIdList = '00';
-$fbdata = $friends_list['data'];
-foreach($fbdata as $key => $val) {
-		$fbIdList .= ','.$val['id'];
-}
-$fbIdList .= ',01';
-
-$select = new select;
-//友人の中で合う友人を探す
-$sametypefriend = $select->sameTypeFriend($fbIdList,$decidedUserType);
-if ($sametypefriend[0] == null) {
-	$sameFriendFlg = 0;
-} else {
-	$sameFriendFlg = 1;
-}
-
-$goodtypefriend = $select->goodTypeFriend($fbIdList,$decidedUserType);
-if ($goodtypefriend[0] == null) {
-	$goodFriendFlg = 0;
-} else {
-	$goodFriendFlg = 1;
-}
-
-
-$smarty->assign ('goodFriendFlg' , $goodFriendFlg);
-$smarty->assign ('sameFriendFlg' , $sameFriendFlg);
-$smarty->assign ('sametypefriend', $sametypefriend);
-$smarty->assign ('goodtypefriend', $goodtypefriend);
+$smarty->assign ('goodFriendFlg' , '1');
+$smarty->assign ('sameFriendFlg' , '1');
+$smarty->assign ('sametypefriend', '1');
+$smarty->assign ('goodtypefriend', '1');
 
 $smarty->assign ('result', $result);
 $smarty->display('tpl/result.php');
