@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+<!--この行はvimのてすとです。あとで消します。-->>
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
 <?php
   $webroot = $_SERVER['DOCUMENT_ROOT'];
@@ -105,3 +105,7 @@
 <!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
 </body>
 </html>
+
+
+
+
