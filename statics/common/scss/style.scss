@@ -1,0 +1,444 @@
+@charset 'utf-8';
+@import "compass";
+/* ======================= BASE ====== */
+@import "compass/reset";
+
+* {
+  @include box-sizing(border-box);
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+$fb: #3B5998;
+$pink: #d64e80;
+$blue: #015da6;
+
+$path: "/common/images/";
+/* ======================= COMMON ====== */
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  position: relative;
+  background: url($path+"bg.jpg") center center repeat;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0 18px;
+  margin: 0 0 50px;
+  background: rgba(255,255,255,0.3);
+  @include box-shadow(0px 1px 2px rgb(200,200,200));
+  .logo {
+    float: left;
+    img {
+      width: 280px;
+      display: block;
+    }
+  }
+  .prof {
+    float: right;
+    a {
+      color: black;
+      display: block;
+      @include text-shadow(1px 1px 0 white);
+      @include transition(all 0.3s ease);
+      &:hover {
+        color: $pink;
+        @include transition(all 0.3s ease);
+      }
+    }
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 34px;
+      height: 34px;
+      margin: 0 10px 0 0;
+      @include border-radius(50%);
+      overflow: hidden;
+      img {
+        width: 34px;
+        display: block;
+      }
+    }
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+      font-size: 14px;
+    }
+  }
+}
+footer {
+  width: 100%;
+  padding: 10px 0 5px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(200,200,200);
+  background: rgba(200,200,200,0.6);
+  small {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+main {
+  padding: 0 0 60px;
+}
+
+/* ======================= INDEX ====== */
+
+.index_inner {
+  width: 900px;
+  margin: 100px auto;
+  display: block;
+  background: white;
+  background: rgba(255,255,255,0.4);
+  border: dashed 1px $pink;
+  padding: 120px 0 110px;
+  .title {
+    font-size: 38px;
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+    margin: 30px auto 60px;
+    width: 80%;
+    line-height: 1.4;
+    color: rgb(80,80,80);
+  }
+}
+
+#fb_login {
+  width: 320px;
+  display: block;
+  text-align: center;
+  padding: 20px 0 18px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: $fb;
+  border: solid 1px $fb;
+  @include border-radius(3px);
+  @include transition(all 0.5s ease);
+  &:hover {
+    color: white;
+    background: $fb;
+    @include opacity(0.8);
+    @include transition(all 0.5s ease);
+  }
+}
+
+#counter {
+  position: absolute;
+  right: -10px;
+  top: 110px;
+  p {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    outline: none;
+    padding: 52px 0 0;
+    font-size: 18px;
+    background: white;
+    color: $pink;
+    border: solid 1px white;
+    @include border-radius(50%);
+    @include box-shadow(2px 2px 2px rgba(200,200,200,0.6));
+    span {
+      font-size: 42px;
+    }
+  }
+}
+
+.inner {
+  width: 900px;
+  margin: 0 auto;
+  display: block;
+  @include clearfix;
+}
+
+/* ======================= MYPAGE ====== */
+
+#btn_area {
+  padding: 20px 0 50px;
+}
+#btn_style {
+  width: 320px;
+  display: block;
+  text-align: center;
+  padding: 20px 0 18px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: $fb;
+  font-size: 16px;
+  border: solid 1px $fb;
+  cursor: pointer;
+  background: transparent;
+  @include border-radius(3px);
+  @include transition(all 0.5s ease);
+  &:hover {
+    color: white;
+    background: $fb;
+    @include opacity(0.8);
+    @include transition(all 0.5s ease);
+  }
+}
+
+/*
+#btn_style {
+  background: rgb(250,160,140);
+  width: 300px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 0 18px;
+  margin: 0 auto;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  @include border-radius(3px);
+  @include transition(all 0.3s ease);
+  &:hover {
+    @include opacity(0.8);
+    @include transition(all 0.3s ease);
+  }
+}
+*/
+
+/* ======================= QUESTION ====== */
+
+#question_wrap {
+  width: 900px;
+  padding: 50px 20px 0;
+  margin: 0 auto 50px;
+  background: white;
+  position: relative;
+  @include border-radius(10px);
+  @include box-shadow(1px 1px 2px rgb(200,200,200));
+  color: rgb(80,80,80);
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 0 30px;
+  }
+  .box_wrap {
+    margin: 0 0 30px;
+  }
+  .box {
+    padding: 24px 0 22px;
+    border-bottom: dashed 1px rgb(230,230,230);
+    label {
+      cursor: pointer;
+      font-size: 18px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      input {
+        display: none;
+      }
+      &:after {
+        content: "●";
+        width: 26px;
+        height: 26px;
+        margin: 5px auto 0;
+        padding: 5px 0 0 1px;
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        color: white;
+        vertical-align: middle;
+        @include border-radius(50%);
+        @include box-shadow(1px 1px 2px rgb(200,200,200) inset);
+        @include transition(all 0.3s ease);
+        @include box-sizing(border-box);
+      }
+      &.yes {
+        margin: 0 10px 0 0;
+        @include transition(all 0.3s ease);
+        &:hover {
+          color: $pink;
+          @include transition(all 0.3s ease);
+        }
+      }
+      &.no {
+        &:hover {
+          color: $blue;
+          @include transition(all 0.3s ease);
+        }
+      }
+    }
+    .checked {
+      @include transition(all 0.3s ease);
+      &.yes {
+        color: $pink;
+        &:after {
+          color: lighten($pink,10%);
+        }
+      }
+      &.no {
+        color: $blue;
+        &:after {
+          color: lighten($blue,10%);
+        }
+      }
+    }
+    .radio {
+      width: 140px;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .q_text {
+      width: 720px;
+      padding: 0 20px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.3;
+    }
+  }
+}
+
+/* ======================= RESULT ====== */
+
+%content_h1_style {
+  font-size: 20px;
+  padding: 0 0 5px;
+  display: block;
+  color: $pink;
+  @include text-shadow(1px 1px 0 white);
+  img {
+    width: 560px;
+  }
+}
+
+#reslut_prof_wrap {
+  margin: 30px auto 60px;
+  #btn_area {
+    padding: 0 0 10px !important;
+  }
+  h1 {
+    @extend %content_h1_style;
+  }
+  .comment_wrap {
+    background: white;
+    background: rgba(255,255,255,0.6);
+    padding: 20px;
+    @include border-radius(5px);
+  }
+  .comment {
+    width: 600px;
+    float: left;
+    padding: 20px 30px 0 10px;
+    line-height: 1.4;
+  }
+  .img {
+   width: 260px;
+   float: left;
+   @include border-radius(50%);
+   overflow: hidden;
+   padding: 10px 0 0 0;
+   img {
+     width: 100%;
+     display: block;
+     @include border-radius(50%);
+
+   }
+  }
+}
+
+#result_parson_wrap {
+  h1 {
+    @extend %content_h1_style;
+  }
+  .box {
+    width: 160px;
+    margin: 0 10px;
+    float: left;
+    text-align: center;
+    a {
+      display: block;
+      text-decoration: none;
+      color: rgb(0,0,0);
+      @include text-shadow(1px 1px 0 white);
+      @include transition(all 0.3s ease);
+      &:hover {
+        @include opacity(0.8);
+        @include transition(all 0.3s ease);
+      }
+    }
+    img {
+      @include border-radius(50%);
+      width: 100%;
+      display: block;
+      margin: 0 0 8px;
+    }
+  }
+  .good,.bad {
+    margin: 0 auto 60px;
+    h1 {
+      text-align: center;
+      border-bottom: none;
+      margin: 0 0 20px;
+       img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .good {
+    a:hover{
+      color: $pink;
+    }
+  }
+  .bad {
+    h1 {
+      color: $blue;
+    }
+    a:hover{
+      color: $blue;
+    }
+  }
+}
+
+.submit {
+  margin: 30px auto;
+  display: block;
+}
+
+
+/* ======================= STATE ====== */
+#prom_text {
+  padding: 0 0 20px;
+  .inner {
+    background: white;
+    background: rgba(255,255,255,0.6);
+    border: dashed 1px $pink;
+    padding: 40px 20px;
+    p {
+      text-align: center;
+      font-size: 16px;
+      a {
+        color: $pink;
+        border-bottom: solid 1px transparent;
+        text-decoration: none;
+        padding: 0 2px;
+        @include transition(all 0.3s ease);
+        &:hover {
+        border-bottom: solid 1px $pink;
+        @include transition(all 0.3s ease);
+        }
+      }
+    }
+  }
+}
+
+/* ======================= THEME ====== */
+
