@@ -1,5 +1,5 @@
 <?php
-require_once('dbConnect.php');
+require_once('class/db/dbConnect.php');
 class select extends dbConnect {
 
 	public function getToken($fb_id) {

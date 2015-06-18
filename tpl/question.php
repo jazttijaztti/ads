@@ -32,7 +32,7 @@
   <div id="counter">
     <p>残り<span></span>問</p>
   </div><!-- counter -->
-    <form action="result.php">
+    <form action="send.php" method="post">
       
       <div class="box_wrap">
         <div class="box">
