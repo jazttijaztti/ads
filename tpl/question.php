@@ -5,33 +5,29 @@
 <title>大事なワードは28文字以内に。平均32文字程度に。</title>
 <meta name="description" content="検索エンジンの検索結果に表示されるディスクリプションの文字数は最大124文字程度、SEO的な考えからすると64文字程度です。">
 <meta name="Keywords" content="平均,7個とか,SEOには,効果ないとか,でも入れといたほうがいいとか,">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=1024">
 <meta name="format-detection" content="telephone=no,address=no,email=no">
- <meta property="og:type" content="website"><!--http://www.inventory.co.jp/labo/facebook/facebook-open-graph-protocol-ogtype.html ここに全種類サンプル-->
+<meta property="og:type" content="website">
 <meta property="og:title" content=" ">
 <meta property="og:image" content=" ">
 <meta property="og:site_name" content=" ">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
-<link rel="stylesheet" href="/common/css/animsition.min.css" media="all">
+<link rel="stylesheet" href="/statics/common/css/style.css" media="all">
+<link rel="stylesheet" href="/statics/common/css/animsition.min.css" media="all">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 </head>
 
 <body class="animsition">
-<!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
-<?php
-  $webroot = $_SERVER['DOCUMENT_ROOT'];
-  include( $webroot."/common/include/header.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_HEADER ▲▲▲▲▲ -->
+
+{%include file='statics/common/include/header.php'%}
   
 <main>
   
   <section id="question_wrap">
     
-  <h1><img src="/common/images/start.png" alt="診断スタート！"></h1>
+  <h1><img src="/statics/common/images/start.png" alt="診断スタート！"></h1>
   
   <div id="counter">
     <p>残り<span></span>問</p>
@@ -308,14 +304,11 @@
   </section>
 </main>
   
-<!-- ▼▼▼▼▼ COMMON_FOOTER ▼▼▼▼▼ -->
-<?php
-  include( $webroot."/common/include/footer.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
+{%include file='statics/common/include/footer.php'%}
+
 </body>
-<script src="/common/js/jquery.animsition.min.js"></script>
-<script src="/common/js/animate_triger.js"></script>
+<script src="/statics/common/js/jquery.animsition.min.js"></script>
+<script src="/statics/common/js/animate_triger.js"></script>
 <script>
 $(function(){
   var box = $(".box");

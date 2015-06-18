@@ -1,5 +1,3 @@
-<!-- testtesttesttesttest -->
-<!-- testtesttesttesttest -->
 <?php
 require_once('fb/facebook.php');
 //require_once('class/tool/login.php');

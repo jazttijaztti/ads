@@ -74,7 +74,7 @@ body {
   min-height: 100%;
   display: block;
   position: relative;
-  background: url("/common/images/bg.jpg") center center repeat;
+  background: url("/statics/common/images/bg.jpg") center center repeat;
 }
 
 header {

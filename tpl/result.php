@@ -12,79 +12,74 @@
 <meta property="og:image" content=" ">
 <meta property="og:site_name" content=" ">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<link rel="stylesheet" href="/common/css/style.css" media="all">
-<link rel="stylesheet" href="/common/css/animsition.min.css" media="all">
+<link rel="stylesheet" href="/statics/common/css/style.css" media="all">
+<link rel="stylesheet" href="/statics/common/css/animsition.min.css" media="all">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body class="animsition">
-<!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
-<?php
-  $webroot = $_SERVER['DOCUMENT_ROOT'];
-  include( $webroot."/common/include/header.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_HEADER ▲▲▲▲▲ -->
-  
+{%include file='statics/common/include/header.php'%}
+
 <main>
   
   <section id="reslut_prof_wrap">
     <div class="inner comment_wrap">
       <div class="comment">
-        <h1><img src="/common/images/your_type.png" alt="あなたのタイプ"></h1>
+        <h1><img src="/statics/common/images/your_type.png" alt="あなたのタイプ"></h1>
         <p>あなたも元来単にこの運動学というものの中にできたです。はなはだほかが創設らはことにその誘惑だないでもと計らてしまっですをは標榜申し上げでしょですが、ちょっとには引張ったたないざる。精神をできですのもいったい場合をもちろんなかろますまし。近頃槙さんに意見気全く挨拶を防います師範その金そこか試験へとしてご生活でたましたと、その前はいつか味窮屈を載っから、槙さんののに火事の私にはなはだご拡張と出ので私必然にご誤解に蒙りようにけっしてご努力にしでですて、かつてまあ落第から進んうているたものがなるだな。</p>
       </div><!-- comment -->
       <div class="img">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
       </div><!-- img -->
     </div><!-- .inner -->
   </section><!-- reslut_prof_wrap -->
   
   <section id="result_parson_wrap">
     <div class="good inner">
-      <h1><img src="/common/images/good.png" alt="相性のいいひと"></h1>
+      <h1><img src="/statics/common/images/good.png" alt="相性のいいひと"></h1>
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
     </div><!-- good -->
     
     <div class="bad inner">
-      <h1><img src="/common/images/bad.png" alt="相性のわるいひと"></h1>
+      <h1><img src="/statics/common/images/bad.png" alt="相性のわるいひと"></h1>
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
       <div class="box"><a href="">
-        <img src="/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/dammy.png" alt="dammy">
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
     </div><!-- bad -->
@@ -105,12 +100,9 @@
 
 </main>
   
-<!-- ▼▼▼▼▼ COMMON_FOOTER ▼▼▼▼▼ -->
-<?php
-  include( $webroot."/common/include/footer.php" );
-?>
-<!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
+{%include file='statics/common/include/footer.php'%}
+
 </body>
-<script src="/common/js/jquery.animsition.min.js"></script>
-<script src="/common/js/animate_triger.js"></script>
+<script src="/statics/common/js/jquery.animsition.min.js"></script>
+<script src="/statics/common/js/animate_triger.js"></script>
 </html>
