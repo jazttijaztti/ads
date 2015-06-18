@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>マイページ</title>
+<title>マイページ|全員矢追によって見られています。</title>
 <meta name="description" content="検索エンジンの検索結果に表示されるディスクリプションの文字数は最大124文字程度、SEO的な考えからすると64文字程度です。">
 <meta name="Keywords" content="平均,7個とか,SEOには,効果ないとか,でも入れといたほうがいいとか,">
 <meta name="viewport" content="width=1024">
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+<!--この行はvimのてすとです。あとで消します。-->>
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
 <?php
   $webroot = $_SERVER['DOCUMENT_ROOT'];
@@ -105,3 +105,7 @@
 <!-- ▲▲▲▲▲ COMMON_FOOTER ▲▲▲▲▲ -->
 </body>
 </html>
+
+
+
+

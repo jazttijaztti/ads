@@ -1,4 +1,6 @@
 <?php
+
+//TEST
 require_once('libralies/smarty/Smarty.class.php');
 require_once('class/db/update.php');
 require_once('class/db/select.php');

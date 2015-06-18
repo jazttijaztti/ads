@@ -1,9 +1,11 @@
+<!-- testtesttesttesttest -->
+<!-- testtesttesttesttest -->
 <?php
 require_once('fb/facebook.php');
 //require_once('class/tool/login.php');
 $base_url = 'http://local.ads.com';
 $statics_url = $base_url.'/statics/';
-
+//
 require_once('libralies/smarty/Smarty.class.php');
 header("Content-Type: text/html; charset=UTF-8");
 
