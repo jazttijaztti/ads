@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!doctype html>
 <html lang="ja">
 <head>
@@ -21,7 +19,6 @@
 
 <body>
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
->>>>>>> e89eff6ee5455ac1ec3dc810e9178e2ff5cfdc9b
 <?php
 require_once('fb/facebook.php');
 //require_once('class/tool/login.php');
@@ -29,7 +26,6 @@ $base_url = 'http://local.ads.com';
 $statics_url = $base_url.'/statics/';
 //
 require_once('libralies/smarty/Smarty.class.php');
-header("Content-Type: text/html; charset=UTF-8");
 
 $smarty = new Smarty;
 //$select = new Select;
