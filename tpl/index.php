@@ -37,9 +37,7 @@ $helper = new FacebookRedirectLoginHelper( 'http://localhost/index.php' );
     <p class="text"></p>
     
     <!--<a href="/mypage.php" id="fb_login">Facebookでログイン</a>-->
-    <?php
-    $helper = new FacebookRedirectLoginHelper($redirect_url, $appId = NULL, $appSecret = NULL);
-	echo '<a href="' . $helper->getLoginUrl() . '">Login with Facebook</a>';?>
+
     {%$login_btn%}
 
   </div><!-- inner -->

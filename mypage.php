@@ -1,7 +1,7 @@
 <?php
 require_once('fb/facebook.php');
 //require_once('class/tool/login.php');
-$base_url = 'http://local.ads.com';
+$base_url = 'http://localhost';
 $statics_url = $base_url.'/statics/';
 //
 require_once('libralies/smarty/Smarty.class.php');

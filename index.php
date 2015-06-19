@@ -5,10 +5,7 @@ $statics_url = $base_url.'/statics/';
 require_once('libralies/smarty/Smarty.class.php');
 require_once('fb/facebook.php');
 require_once('class/db/select.php');
-$login_btn = output_login_btn($helper);
 
-
-//header("Content-Type: text/html; charset=UTF-8");
 $smarty = new Smarty;
 $select = new Select;
 
