@@ -50,10 +50,11 @@ if ( isset( $session ) ) {
   $response = $request->execute();
   // get response
   $graphObject = $response->getGraphObject();
-
+/*
   // print data
   echo  print_r( $graphObject, 1 );
 } else {
   // show login url
-  //echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
+  echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
+*/
 }
