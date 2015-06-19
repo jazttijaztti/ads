@@ -15,13 +15,6 @@ class dbConnect {
 		//password
 		$this->passwd = "root";
 
-
-/*
-		if(!$this->con=mysql_connect($this->hostname,$this->userid,$this->passwd)){
-			echo "error";
-			exit;
-		}
-*/
     try {
       $pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd",
       array(
