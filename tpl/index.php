@@ -1,3 +1,11 @@
+<?php
+
+require_once ('facebook.php');
+// login helper with redirect_uri
+$helper = new FacebookRedirectLoginHelper( 'http://localhost/index.php' );
+
+?>
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -28,7 +36,8 @@
     <p class="text">あなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけます</p>
     <p class="text"></p>
     
-    <a href="/mypage.php" id="fb_login">Facebookでログイン</a>
+    <!--<a href="/mypage.php" id="fb_login">Facebookでログイン</a>-->
+    <?php echo '<a href="' . $helper->getLoginUrl() . '" id="fb_login">Login</a>'; ?>
   </div><!-- inner -->
 </main>
   
