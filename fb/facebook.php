@@ -57,7 +57,8 @@ if ( isset( $session ) ) {
   // show login url
   echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
 */
-}
+}else{
+
   function output_login_btn($helper){
    return '<a href="' . $helper->getLoginUrl() . '" id="fb_login">Facebookでログイン</a>';
   }
