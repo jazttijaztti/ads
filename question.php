@@ -23,3 +23,4 @@ $error ="";
 $smarty->display('tpl/question.php');
 exit;
 
+
