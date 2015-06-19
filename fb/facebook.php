@@ -30,33 +30,31 @@ use Facebook\HttpClients\FacebookCurl;
 
 // init app with app id (APPID) and secret (SECRET)
 FacebookSession::setDefaultApplication('838352262913026', '28daeb117c66fbcb466ecf9727360dcd');
-
 // login helper with redirect_uri
 $helper = new FacebookRedirectLoginHelper( 'http://localhost/mypage.php' );
 
 try {
-
-  $session = $helper->getSessionFromRedirect();
-} catch( FacebookRequestException $ex ) {
-  // When Facebook returns an error
-} catch( Exception $ex ) {
-  // When validation fails or other local issues
+      $session = $helper->getSessionFromRedirect();
+    } catch( FacebookRequestException $ex ) {
+      // When Facebook returns an error
+    } catch( Exception $ex ) {
+      // When validation fails or other local issues
 }
-
 // see if we have a session
-if ( isset( $session ) ) {
-  // graph api request for user data
-  $request = new FacebookRequest( $session, 'GET', '/me' );
-  $response = $request->execute();
-  // get response
-  $graphObject = $response->getGraphObject();
-/*
-  // print data
-  echo  print_r( $graphObject, 1 );
-} else {
-  // show login url
-  echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
-*/
+if (isset($session)) {
+  try {
+     $response = (new FacebookRequest($session, 'GET', '/me'))->execute();
+     $object   = $response->getGraphObject();
+     $token    = $session->getToken();
+     $id       = $object->getProperty('id');
+     $name       = $object->getProperty('name');
+     $_SESSION['fb_id'] = $id;
+     $_SESSION['fb_name'] = $name;
+  } catch (FacebookRequestException $ex) {
+     echo $ex->getMessage();
+  } catch (\Exception $ex) {
+    echo $ex->getMessage();
+  }
 }else{
   $login_btn = output_login_btn($helper);
 }
