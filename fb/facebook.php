@@ -32,7 +32,7 @@ use Facebook\HttpClients\FacebookCurl;
 FacebookSession::setDefaultApplication('838352262913026', '28daeb117c66fbcb466ecf9727360dcd');
 
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper( 'http://localhost/index.php' );
+$helper = new FacebookRedirectLoginHelper( 'http://localhost/mypage.php' );
 
 try {
 
@@ -58,10 +58,10 @@ if ( isset( $session ) ) {
   echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
 */
 }else{
-
+  $login_btn = output_login_btn($helper);
+}
   function output_login_btn($helper){
    return '<a href="' . $helper->getLoginUrl() . '" id="fb_login">Facebookでログイン</a>';
   }
-}
 
 ?>

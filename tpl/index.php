@@ -27,7 +27,6 @@
     <p class="title"><img src="/statics/common/images/title.png" alt="あなたのパートナー相性占い"></p>
     <p class="text">あなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけますあなたの相性のイイヒトを見つけます</p>
     <p class="text"></p>
-    
     {%$login_btn%}
 
   </div><!-- inner -->
