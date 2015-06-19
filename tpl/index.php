@@ -1,3 +1,11 @@
+<?php
+
+//require_once ('facebook.php');
+// login helper with redirect_uri
+$helper = new FacebookRedirectLoginHelper( 'http://localhost/index.php' );
+
+?>
+
 <!doctype html>
 <html lang="ja">
 <head>
@@ -32,6 +40,8 @@
     <?php
     $helper = new FacebookRedirectLoginHelper($redirect_url, $appId = NULL, $appSecret = NULL);
 	echo '<a href="' . $helper->getLoginUrl() . '">Login with Facebook</a>';?>
+    {%$login_btn%}
+
   </div><!-- inner -->
 </main>
   

@@ -11,7 +11,7 @@ $smarty = new Smarty;
 //$select = new Select;
 $smarty->left_delimiter  = "{%";
 $smarty->right_delimiter = "%}";
-$smarty->assign ('base_url', $base_url);
+$smarty->assign ('yaopa', $base_url);
 $smarty->assign ('statics_url', $statics_url);
 
 $smarty->display('tpl/mypage.php');

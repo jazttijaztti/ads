@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 04b3ffb86c5ef47dd77cc7cd54421b2e7c0eed83
 <!doctype html>
 <html lang="ja">
 <head>
@@ -19,6 +23,12 @@
 
 <body>
 <!-- ▼▼▼▼▼ COMMON_HEADER ▼▼▼▼▼ -->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 04550172cdfb4a37093bd91d9b8393c3a98b1377
+=======
+>>>>>>> 04b3ffb86c5ef47dd77cc7cd54421b2e7c0eed83
 <?php
 require_once('fb/facebook.php');
 //require_once('class/tool/login.php');
@@ -26,6 +36,10 @@ $base_url = 'http://local.ads.com';
 $statics_url = $base_url.'/statics/';
 //
 require_once('libralies/smarty/Smarty.class.php');
+<<<<<<< HEAD
+//header("Content-Type: text/html; charset=UTF-8");
+=======
+>>>>>>> 04b3ffb86c5ef47dd77cc7cd54421b2e7c0eed83
 
 $smarty = new Smarty;
 //$select = new Select;

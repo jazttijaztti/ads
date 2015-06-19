@@ -36,7 +36,7 @@ if ($_POST['fbEmail']) {
 	$error = "fb";
 }
 if ($error != "") {
-	$url = "Location: http://local.ads.com/mypage.php?error=".$error;
+	$url = "Location: /mypage.php?error=".$error;
 	header($url);
 	exit;
 }
