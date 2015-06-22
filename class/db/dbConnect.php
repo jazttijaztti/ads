@@ -13,7 +13,7 @@ class dbConnect {
 		//userid
 		$this->userid = "root";
 		//password
-		$this->passwd = "";
+		$this->passwd = "root";
 
     try {
       $pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd",
@@ -22,7 +22,6 @@ class dbConnect {
 		} catch (PDOException $e) {
       die($e->getMessage());
     }		
-		
 	}
 }
 ?>
