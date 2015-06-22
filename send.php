@@ -2,6 +2,7 @@
 
 //TEST
 require_once('libralies/smarty/Smarty.class.php');
+require_once('class/db/dbConnect.php');
 require_once('class/db/update.php');
 require_once('class/db/select.php');
 require_once('fb/facebook.php');
@@ -19,6 +20,8 @@ $name  = "";
 $error = "";
 
 $param = array();
+
+
 
 if ($_POST['fbName']) {
 	$param['name'] = strip_tags(htmlspecialchars($_POST['fb_name'], ENT_QUOTES, 'UTF-8'));
