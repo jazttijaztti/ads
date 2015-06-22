@@ -38,7 +38,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q1" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q1" value="0">
@@ -51,7 +51,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q2" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q2" value="0">
@@ -64,7 +64,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q3" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q3" value="0">
@@ -77,7 +77,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q4" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q4" value="0">
@@ -90,7 +90,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q5" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q5" value="0">
@@ -103,7 +103,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q6" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q6" value="0">
@@ -116,7 +116,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q7" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q7" value="0">
@@ -129,7 +129,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q8" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q8" value="0">
@@ -142,7 +142,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q9" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q9" value="0">
@@ -155,7 +155,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q10" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q10" value="0">
@@ -168,7 +168,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q11" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q11" value="0">
@@ -181,7 +181,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q12" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q12" value="0">
@@ -194,7 +194,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q13" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q13" value="0">
@@ -207,7 +207,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q14" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q14" value="0">
@@ -220,7 +220,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q15" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q15" value="0">
@@ -233,7 +233,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q16" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q16" value="0">
@@ -246,7 +246,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q17" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q17" value="0">
@@ -259,7 +259,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q18" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q18" value="0">
@@ -272,7 +272,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q19" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q19" value="0">
@@ -285,7 +285,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q20" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q20" value="0">
@@ -298,7 +298,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q21" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q21" value="0">
@@ -311,7 +311,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q22" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q22" value="0">
@@ -324,7 +324,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q23" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q23" value="0">
@@ -337,7 +337,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q24" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q24" value="0">
@@ -350,7 +350,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q25" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q25" value="0">
@@ -363,7 +363,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q26" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q26" value="0">
@@ -376,7 +376,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q27" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q27" value="0">
@@ -389,7 +389,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q28" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q28" value="0">
@@ -402,7 +402,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q29" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q29" value="0">
@@ -415,7 +415,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q30" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q30" value="0">
@@ -428,7 +428,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q31" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q31" value="0">
@@ -441,7 +441,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q32" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q32" value="0">
@@ -454,7 +454,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q33" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q33" value="0">
@@ -467,7 +467,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q34" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q34" value="0">
@@ -480,7 +480,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q35" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q35" value="0">
@@ -493,7 +493,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q36" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q36" value="0">
@@ -506,7 +506,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q37" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q37" value="0">
@@ -519,7 +519,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q38" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q38" value="0">
@@ -532,7 +532,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q39" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q39" value="0">
@@ -545,7 +545,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q40" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q40" value="0">
@@ -558,7 +558,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q41" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q41" value="0">
@@ -571,7 +571,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q42" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q42" value="0">
@@ -584,7 +584,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q43" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q43" value="0">
@@ -597,7 +597,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q44" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q44" value="0">
@@ -610,7 +610,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q45" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q45" value="0">
@@ -623,7 +623,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q46" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q46" value="0">
@@ -636,7 +636,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q47" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q47" value="0">
@@ -649,7 +649,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q48" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q48" value="0">
@@ -662,7 +662,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q49" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q49" value="0">
@@ -675,7 +675,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q50" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q50" value="0">
@@ -688,7 +688,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q51" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q51" value="0">
@@ -701,7 +701,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q52" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q52" value="0">
@@ -714,7 +714,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q53" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q53" value="0">
@@ -727,7 +727,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q54" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q54" value="0">
@@ -740,7 +740,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q55" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q55" value="0">
@@ -753,7 +753,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q56" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q56" value="0">
@@ -766,7 +766,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q57" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q57" value="0">
@@ -779,7 +779,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q58" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q58" value="0">
@@ -792,7 +792,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q59" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q59" value="0">
@@ -805,7 +805,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q60" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q60" value="0">
@@ -818,7 +818,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q61" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q61" value="0">
@@ -831,7 +831,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q62" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q62" value="0">
@@ -844,7 +844,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q63" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q63" value="0">
@@ -857,7 +857,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q64" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q64" value="0">
@@ -870,7 +870,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q65" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q65" value="0">
@@ -883,7 +883,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q66" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q66" value="0">
@@ -896,7 +896,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q67" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q67" value="0">
@@ -909,7 +909,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q68" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q68" value="0">
@@ -922,7 +922,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q69" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q69" value="0">
@@ -935,7 +935,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q70" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q70" value="0">
@@ -948,7 +948,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q71" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q71" value="0">
@@ -961,7 +961,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q72" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q72" value="0">
@@ -974,7 +974,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q73" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q73" value="0">
@@ -987,7 +987,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q74" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q74" value="0">
@@ -1000,7 +1000,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q75" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q75" value="0">
@@ -1013,7 +1013,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q76" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q76" value="0">
@@ -1026,7 +1026,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q77" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q77" value="0">
@@ -1039,7 +1039,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q78" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q78" value="0">
@@ -1052,7 +1052,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q79" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q79" value="0">
@@ -1065,7 +1065,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q80" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q80" value="0">
@@ -1078,7 +1078,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q81" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q81" value="0">
@@ -1091,7 +1091,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q82" value="1">
+              Yes<input type="radio" name="ts1[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q82" value="0">
@@ -1104,7 +1104,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q83" value="1">
+              Yes<input type="radio" name="ts3[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q83" value="0">
@@ -1117,7 +1117,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q84" value="1">
+              Yes<input type="radio" name="ts5[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q84" value="0">
@@ -1130,7 +1130,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q85" value="1">
+              Yes<input type="radio" name="ts7[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q85" value="0">
@@ -1143,7 +1143,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q86" value="1">
+              Yes<input type="radio" name="ts9[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q86" value="0">
@@ -1156,7 +1156,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q87" value="1">
+              Yes<input type="radio" name="ts8[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q87" value="0">
@@ -1169,7 +1169,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q88" value="1">
+              Yes<input type="radio" name="ts6[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q88" value="0">
@@ -1182,7 +1182,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q89" value="1">
+              Yes<input type="radio" name="ts4[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q89" value="0">
@@ -1195,7 +1195,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="radio" name="q90" value="1">
+              Yes<input type="radio" name="ts2[]" value="1">
             </label>
             <label class="no">
               No<input type="radio" name="q90" value="0">
