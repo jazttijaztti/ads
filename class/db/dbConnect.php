@@ -12,7 +12,7 @@ class dbConnect {
 		//userid
 		$this->userid = "root";
 		//password
-		$this->passwd = "";
+		$this->passwd = "root";
 
            try {
               $this->pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd",
