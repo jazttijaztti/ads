@@ -7,7 +7,7 @@ class dbConnect {
 	public $passwd;
 	public $con;
 
-	public function __construct() {
+
 		$this->dbname = "marryme";
 		$this->hostname = "localhost";
 		//userid
