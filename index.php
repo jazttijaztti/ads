@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 //ここにルートをbase_urlとして格納
 $base_url = 'http://localhost/';
 $statics_url = $base_url.'/statics/';
