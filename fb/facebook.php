@@ -1,7 +1,6 @@
 <?php
 
-session_start();
-
+//session_start();
 require_once( 'Facebook/FacebookSession.php' );
 require_once( 'Facebook/FacebookRedirectLoginHelper.php' );
 require_once( 'Facebook/FacebookRequest.php' );
@@ -14,6 +13,7 @@ require_once( 'Facebook/Entities/AccessToken.php' );
 require_once( 'Facebook/HttpClients/FacebookHttpable.php' );
 require_once( 'Facebook/HttpClients/FacebookCurlHttpClient.php' );
 require_once( 'Facebook/HttpClients/FacebookCurl.php' ); 
+
 
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;

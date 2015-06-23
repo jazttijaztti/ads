@@ -1,16 +1,19 @@
 <?php
+session_start();
+
 require_once('fb/facebook.php');
 //use Facebook\FacebookRequest;
 require_once('class/tool/login.php');
-
 $base_url = 'http://localhost';
 $statics_url = $base_url.'/statics/';
 require_once('libralies/smarty/Smarty.class.php');
-header("Content-Type: text/html; charset=UTF-8");
-if (!$_SESSION['fb_id']) {
-   echo "ログインしていないからその処理をかく"; //林さん
+//header("Content-Type: text/html; charset=UTF-8");
+if (!isset($_SESSION['fb_id'])) {
+    header('Location: /');
+exit;
 } 
-
+//var_dump ($_SESSION);
+//exit;
 
 $fb_id = $_SESSION['fb_id'];
 $user_name = $_SESSION['fb_name'];
