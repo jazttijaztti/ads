@@ -114,8 +114,10 @@ arsort($type);
 
 //一番多かったタイプを取得する
 $decidedUserType = Key($type);
-$content  = new content;
 
+$_SESSION['decidedUserType'] = $decidedUserType;
+
+$content  = new content;
 
 if ($noSelectFlg == true ) {
 	$param['type'] = $decidedUserType ='type9';
