@@ -9,14 +9,6 @@ class update extends dbConnect {
 		mysql_set_charset("UTF8",$this->con);
 		$row = mysql_select_db($this->dbname,$this->con);
 
-    try {
-    $dbh = new PDO('mysql:host=localhost;dbname=marryme;charset=utf8','root','root',
-    array(PDO::ATTR_EMULATE_PREPARES => false));
-    } catch (PDOException $e) {
-     exit('データベース接続失敗。'.$e->getMessage());
-    }
-
-
 //		mysql_set_charset("UTF8",$this->con);
 //		$row = mysql_select_db($this->dbname,$this->con);
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
