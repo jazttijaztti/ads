@@ -23,7 +23,8 @@ $_SESSION['USERID'] = '1';
 			$userInfo = $update->getUserInfo($param);
 
 			//ユーザ情報がなかったらログイン画面へ
-			if ($userInfo['userExistFlg'] == false) {
+//			if ($userInfo['userExistFlg'] == false) {
+			if ($userInfo == false) {
 				header("Location: http://localhost/");
 				exit;
 			} else {

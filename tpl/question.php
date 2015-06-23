@@ -1226,31 +1226,30 @@ $(function(){
   var box_len = $(box).length;
   $("#counter").find("span").text(box_len);
   
-  var radio = $(box).find("input[type='checkbox']");
+  var check = $(box).find("input[type='checkbox']");
+  $(check).prop("checked",false);
   
   var flag = false;  
   var btn = $("[name=submit_btn]");
 
-  $(radio).on("change",function(){
+  $(check).on("change",function(){
+    $(this).parent("label").siblings("label").children("input").prop("checked",false);
+
     var radio_checked = $(box).find("input[type='checkbox']:checked").size();
     $("#counter").find("span").text(box_len-radio_checked);
-    $(this).parent("label").addClass("checked").siblings("label").removeClass("checked");
+    $(this).parent("label").toggleClass("checked").siblings("label").removeClass("checked");
     if($(radio_checked)==$(box_len)){
       flag = true;
       $(btn).prop("disabled",false);
     }
-  });
-  console.log($(btn));
-  
-  $(btn).on("click",function(){
-    console.log("aa");
-    if(!flag){
-      alert("すべての質問に答えてください。(あと"+box_len-radio_checked+"問)");
-    }
     
   });
   
-  
+  $(btn).on("click",function(){
+    if(!flag){
+      alert("すべての質問に答えてください。(あと"+box_len-radio_checked+"問)");
+    }
+  });
 });
 </script>
 </html>

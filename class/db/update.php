@@ -19,15 +19,16 @@ class update extends dbConnect {
       $test = $this->pdo->prepare($sql);
       $ret = $test->execute();
       //この辺なおしてね
-      //var_dump($ret);
-      //exit;
+	    
 	    //$ret = $return[0];
+/*
 	    if ($fb_id == $ret['fb_id']) {
 	    	$return[0]['userExistFlg'] = true;
 	    } else {
 	    	$return[0]['userExistFlg'] = false;
 	    }
-	    return $return[0];
+*/
+	    return $ret;
 		}
 
 	}
@@ -35,20 +36,19 @@ class update extends dbConnect {
 
 		$fb_id = $params['fb_id'];
 		$type = $params['type'];
-		mysql_set_charset("UTF8",$this->con);
-		$row = mysql_select_db($this->dbname,$this->con);
-		$sql = "UPDATE user SET type = '".$type."'  WHERE fb_id = '$fb_id' ;";
-
-		if(!$res = mysql_query($sql)){
+//		mysql_set_charset("UTF8",$this->con);
+//		$row = mysql_select_db($this->dbname,$this->con);
+		$sql = "UPDATE user SET type = '".$type. "' WHERE fb_id =".$fb_id;
+    
+		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-			mysql_close($con);
+      $this->pdo = null;
 			exit;
 		} else {
-			return true;
+      $test = $this->pdo->prepare($sql);
+      $ret = $test->execute();
+			return $ret;
 		}
-
-
-		return true;
 	}
 
 	public function updateToken($params) {
