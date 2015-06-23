@@ -18,15 +18,17 @@ exit;
 $fb_id = $_SESSION['fb_id'];
 $user_name = $_SESSION['fb_name'];
 $param = array('fb_id' =>$fb_id , 'user_name' =>$user_name);
-
-//まずこのfb_idがDBにあるのか確認する
 $login = new login;
+<<<<<<< HEAD
 //$b = $login->is_user($fb_id);
 $b = $login->getUserInfo($fb_id);
 
+=======
+$b = $login->getUserInfo($fb_id);
+>>>>>>> bdf0dff4062918fd0fde4147f86df0136d0fede3
 if ($b == true) {
    //あるならuserテーブルからそのユーザの情報をもってくる
-   $user_info = $login->get_user_info($fb_id);
+   $user_info = $login->getUserInfo($fb_id);
 } else {
    //fb_idがDBにないなら新規ユーザだから登録する
    $res = $Login->insert_new_user($param);
@@ -35,6 +37,7 @@ if ($b == true) {
        $user_info = $login->get_user_info($fb_id);
    } else {
        //redirectする ?error=3
+    header('Location: localhost/');
    }
 }
 

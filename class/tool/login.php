@@ -6,9 +6,9 @@ class login {
 		$userInfo = array();
 		session_cache_limiter('none');
 		//session_start();
-    $_SESSION["USERID"] = 1;
+
 		if (!isset($_SESSION["USERID"]) or $_SESSION["USERID"] ==null) {
-			header("Location: /index.php");
+			header("Location: http://localhost/");
 			exit;
 		} else {
 			//ログイン中ならこっちにはいる。
@@ -23,7 +23,7 @@ class login {
 
 			//ユーザ情報がなかったらログイン画面へ
 			if ($userInfo['userExistFlg'] == false) {
-				header("Location: /index.php");
+				header("Location: http://localhost/");
 				exit;
 			} else {
 				return $userInfo;

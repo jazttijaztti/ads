@@ -13,8 +13,8 @@ header("Content-Type: text/html; charset=UTF-8");
 $login = new login;
 $userInfo = $login->getUserInfo();
 $config = array(
-      'appId'  => '26290705237194513',
-      'secret' => 'c48e904bdsaf071bf1c5f068653eaedb930',
+      'appId'  => '838352262913026',
+      'secret' => '28daeb117c66fbcb466ecf9727360dcd',
       'cookie' => true,
       'fileUpload' => true,
 );
