@@ -19,16 +19,15 @@ class update extends dbConnect {
 //		mysql_set_charset("UTF8",$this->con);
 //		$row = mysql_select_db($this->dbname,$this->con);
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
-		if(!$res = $dbh->query($sql)){
-//		if(!$res = mysql_query($sql)){
+		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-//			mysql_close($con);
-      $dbh = null;
+                        $this->dbh = null;
 			exit;
 		} else {
-		    while($row = mysql_fetch_array($res)) {
-		  		$return[] = $row;
-   		    }
+                    $ret = $this->pdo->exec($sql);
+//この辺なおしてね
+var_dump($sql);
+exit;
    		    $ret = $return[0];
    		    if ($fb_id == $ret['fb_id']) {
    		    	$return[0]['userExistFlg'] = true;
