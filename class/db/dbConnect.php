@@ -6,7 +6,6 @@ class dbConnect {
 	public $userid;
 	public $passwd;
 	public $pdo;
-
 	public function __construct() {
 		$this->dbname = "marryme";
 		$this->hostname = "localhost";
