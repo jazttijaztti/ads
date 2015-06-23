@@ -21,7 +21,9 @@ $param = array('fb_id' =>$fb_id , 'user_name' =>$user_name);
 
 //まずこのfb_idがDBにあるのか確認する
 $login = new login;
-$b = $login->is_user($fb_id);
+//$b = $login->is_user($fb_id);
+$b = $login->getUserInfo($fb_id);
+
 if ($b == true) {
    //あるならuserテーブルからそのユーザの情報をもってくる
    $user_info = $login->get_user_info($fb_id);
