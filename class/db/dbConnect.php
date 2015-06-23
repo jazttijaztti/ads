@@ -5,6 +5,7 @@ class dbConnect {
 	public $hostname;
 	public $userid;
 	public $passwd;
+	public $con;
 	public $pdo;
 	public function __construct() {
 		$this->dbname = "marryme";
@@ -14,13 +15,13 @@ class dbConnect {
 		//password
 		$this->passwd = "root";
 
-           try {
-              $this->pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd",
-              array(
-              PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET `utf8`"));
-           } catch (PDOException $e) {
-              die($e->getMessage());
-           }		
-        }
+    try {
+      $this->pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd",
+      array(
+      PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET `utf8`"));
+		} catch (PDOException $e) {
+      die($e->getMessage());
+    }		
+	}
 }
 ?>

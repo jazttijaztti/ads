@@ -19,6 +19,9 @@ $fb_id = $_SESSION['fb_id'];
 $user_name = $_SESSION['fb_name'];
 $param = array('fb_id' =>$fb_id , 'user_name' =>$user_name);
 $login = new login;
+//$b = $login->is_user($fb_id);
+$b = $login->getUserInfo($fb_id);
+
 $b = $login->getUserInfo($fb_id);
 if ($b == true) {
    //あるならuserテーブルからそのユーザの情報をもってくる
