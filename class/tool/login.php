@@ -5,10 +5,10 @@ class login {
 	public function getUserInfo() {
 		$userInfo = array();
 		session_cache_limiter('none');
-		session_start();
+		//session_start();
 
 		if (!isset($_SESSION["USERID"]) or $_SESSION["USERID"] ==null) {
-			header("Location: http://local.ads.com/index.php");
+			header("Location: http://localhost/");
 			exit;
 
 		} else {
@@ -24,7 +24,7 @@ class login {
 
 			//ユーザ情報がなかったらログイン画面へ
 			if ($userInfo['userExistFlg'] == false) {
-				header("Location: http://local.ads.com/index.php");
+				header("Location: http://localhost/");
 				exit;
 			} else {
 				return $userInfo;

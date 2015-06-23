@@ -5,7 +5,6 @@ class update extends dbConnect {
 
 	public function getUserInfo($params) {
 		$fb_id = $params['fb_id'];
-
 		mysql_set_charset("UTF8",$this->con);
 		$row = mysql_select_db($this->dbname,$this->con);
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
