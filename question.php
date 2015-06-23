@@ -19,6 +19,7 @@ $smarty->left_delimiter  = "{%";
 $smarty->right_delimiter = "%}";
 $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
+$smarty->assign ('user_name', "808feet");
 $error ="";
 $smarty->display('tpl/question.php');
 exit;

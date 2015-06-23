@@ -10,7 +10,6 @@ class login {
 		if (!isset($_SESSION["USERID"]) or $_SESSION["USERID"] ==null) {
 			header("Location: http://localhost/");
 			exit;
-
 		} else {
 			//ログイン中ならこっちにはいる。
 

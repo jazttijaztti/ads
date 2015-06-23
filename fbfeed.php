@@ -107,6 +107,6 @@ if($shareType){
   $smarty->display('tpl/result.php');
   exit;
 } else {
-  header("Location: http://local.ads.com/index.php");
+  header("Location: localhost/index.php");
   exit;
 }
