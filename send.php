@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //TEST
 require_once('libralies/smarty/Smarty.class.php');
 require_once('class/db/dbConnect.php');
@@ -19,8 +19,7 @@ $name  = "";
 $error = "";
 
 $param = array();
-
-
+/**
 
 if ($_POST['fbName']) {
 	$param['name'] = strip_tags(htmlspecialchars($_POST['fb_name'], ENT_QUOTES, 'UTF-8'));
@@ -42,7 +41,7 @@ if ($error != "") {
 	header($url);
 	exit;
 }
-
+*/
 
 //質問のカテゴリー毎に配列を格納する
 //書き方の効率が悪いけれど次にどのレベルの人が見るかわからないので
@@ -123,6 +122,8 @@ if ($noSelectFlg == true ) {
 } else {
 	$param['type'] = $decidedUserType;
 }
+var_dump($decidedUserType);
+exit;
 $result = $content->getTypeContent($decidedUserType);
 
 //結果をDBに保存する

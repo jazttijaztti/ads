@@ -5,26 +5,28 @@ class update extends dbConnect {
 
 	public function getUserInfo($params) {
 		$fb_id = $params['fb_id'];
-		mysql_set_charset("UTF8",$this->con);
-		$row = mysql_select_db($this->dbname,$this->con);
+		$fb_id = 1;
+//		mysql_set_charset("UTF8",$this->con);
+//		$row = mysql_select_db($this->dbname,$this->con);
 
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
 		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-//			mysql_close($con);
-      $dbh = null;
+      $this->pdo = null;
 			exit;
 		} else {
-		    while($row = mysql_fetch_array($res)) {
-		  		$return[] = $row;
-   		    }
-   		    $ret = $return[0];
-   		    if ($fb_id == $ret['fb_id']) {
-   		    	$return[0]['userExistFlg'] = true;
-   		    } else {
-   		    	$return[0]['userExistFlg'] = false;
-   		    }
-   		    return $return[0];
+      $test = $this->pdo->prepare($sql);
+      $ret = $test->execute();
+      //この辺なおしてね
+      //var_dump($ret);
+      //exit;
+	    //$ret = $return[0];
+	    if ($fb_id == $ret['fb_id']) {
+	    	$return[0]['userExistFlg'] = true;
+	    } else {
+	    	$return[0]['userExistFlg'] = false;
+	    }
+	    return $return[0];
 		}
 
 	}
