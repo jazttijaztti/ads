@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once('fb/facebook.php');
 //use Facebook\FacebookRequest;
 require_once('class/tool/login.php');
@@ -22,7 +21,6 @@ $login = new login;
 //$b = $login->is_user($fb_id);
 $b = $login->getUserInfo($fb_id);
 
-$b = $login->getUserInfo($fb_id);
 if ($b == true) {
    //あるならuserテーブルからそのユーザの情報をもってくる
    $user_info = $login->getUserInfo($fb_id);
