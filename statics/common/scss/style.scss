@@ -12,7 +12,7 @@ $fb: #3B5998;
 $pink: #d64e80;
 $blue: #015da6;
 
-$path: "/common/images/";
+$path: "/statics/common/images/";
 /* ======================= COMMON ====== */
 html {
   width: 100%;
@@ -167,6 +167,12 @@ main {
 
 #btn_area {
   padding: 20px 0 50px;
+  div {
+    width: 320px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
 }
 #btn_style {
   width: 320px;
@@ -189,29 +195,6 @@ main {
     @include transition(all 0.5s ease);
   }
 }
-
-/*
-#btn_style {
-  background: rgb(250,160,140);
-  width: 300px;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 20px 0 18px;
-  margin: 0 auto;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  @include border-radius(3px);
-  @include transition(all 0.3s ease);
-  &:hover {
-    @include opacity(0.8);
-    @include transition(all 0.3s ease);
-  }
-}
-*/
 
 /* ======================= QUESTION ====== */
 

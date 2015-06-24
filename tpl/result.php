@@ -62,7 +62,7 @@
         <p class="name">ヤオイタクミ<span class="age">(24)</span></p>
       </a></div><!-- box -->
     </div><!-- good -->
-    
+
     <div class="bad inner">
       <h1><img src="/statics/common/images/bad.png" alt="相性のわるいひと"></h1>
       <div class="box"><a href="">
