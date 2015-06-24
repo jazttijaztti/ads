@@ -14,8 +14,6 @@ class login extend dbConnect{
 		
 	   }
 
-<<<<<<< HEAD
-=======
 			//セッションに保存されているユーザIDからユーザ情報を取得
 			$param['fb_id'] = $_SESSION["USERID"];
 
@@ -34,7 +32,6 @@ class login extend dbConnect{
 		}
 
 	}
->>>>>>> dfa87322988a23d54289b6540b392da8a1dc6eda
 
 
 	   }
