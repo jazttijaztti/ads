@@ -1,9 +1,6 @@
 <?php
 require_once('class/db/dbConnect.php');
-require_once('class/db/update.php');
-
-class login {
-
+class login extends dbConnect {
 	public function getUserInfo() {
 		$userInfo = array();
 		session_cache_limiter('none');
@@ -33,8 +30,23 @@ $_SESSION['USERID'] = '1';
 		}
 
 	}
+        public function is_user($fb_id) {
+            $sql = "SELECT * from user WHERE fb_id =".$fb_id;
+            $res = $this->pdo->prepare($sql);
+            $res->execute();
+            $ret = false;
+            while($result = $res->fetch(PDO::FETCH_ASSOC)) {
+               $ret = $result; 
+            }
+            return $ret;           
 
-
+        }
+       public function insert_new_user($arr) {
+            //pdoのinsertを書く
+   
+           //return $ret;
+       }
+        
 
 }
 ?>

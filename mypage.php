@@ -19,23 +19,20 @@ $fb_id = $_SESSION['fb_id'];
 $user_name = $_SESSION['fb_name'];
 $param = array('fb_id' =>$fb_id , 'user_name' =>$user_name);
 $login = new login;
-//$b = $login->is_user($fb_id);
-$b = $login->getUserInfo($fb_id);
-
-$b = $login->getUserInfo($fb_id);
-if ($b == true) {
-   //あるならuserテーブルからそのユーザの情報をもってくる
-   $user_info = $login->getUserInfo($fb_id);
+$user_info = $login->is_user($fb_id);
+var_dump($res);
+exit;
+if ($user_info == false) {
+   //DBにないから新規ユーザです。
+   //insertしてください
+   //if ($insert_flg) {
+       //ここで登録したユーザの情報を改めてもってくる
+  // } else {
+       //失敗してるからトップにリダイレクト
+     }
 } else {
-   //fb_idがDBにないなら新規ユーザだから登録する
-   $res = $Login->insert_new_user($param);
-   if ($res) {
-       //登録したらそのユーザの情報をすべてもってくる
-       $user_info = $login->get_user_info($fb_id);
-   } else {
-       //redirectする ?error=3
-    header('Location: localhost/');
-   }
+   //既存のユーザです。
+   //すでにそのユーザの情報を持ています。
 }
 
 

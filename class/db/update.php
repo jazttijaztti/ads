@@ -36,17 +36,17 @@ class update extends dbConnect {
 
 		$fb_id = $params['fb_id'];
 		$type = $params['type'];
-//		mysql_set_charset("UTF8",$this->con);
-//		$row = mysql_select_db($this->dbname,$this->con);
+		//		mysql_set_charset("UTF8",$this->con);
+		//		$row = mysql_select_db($this->dbname,$this->con);
 		$sql = "UPDATE user SET type = '".$type. "' WHERE fb_id =".$fb_id;
-    
+
 		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-      $this->pdo = null;
+			$this->pdo = null;
 			exit;
 		} else {
-      $test = $this->pdo->prepare($sql);
-      $ret = $test->execute();
+			$test = $this->pdo->prepare($sql);
+			$ret = $test->execute();
 			return $ret;
 		}
 	}
