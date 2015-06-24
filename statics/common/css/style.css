@@ -57,8 +57,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
@@ -82,8 +80,6 @@ header {
   padding: 20px 0 18px;
   margin: 0 0 50px;
   background: rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: 0px 1px 2px #c8c8c8;
-  -webkit-box-shadow: 0px 1px 2px #c8c8c8;
   box-shadow: 0px 1px 2px #c8c8c8;
 }
 header .logo {
@@ -100,15 +96,11 @@ header .prof a {
   color: black;
   display: block;
   text-shadow: 1px 1px 0 white;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 header .prof a:hover {
   color: #d64e80;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -118,8 +110,6 @@ header .prof .icon {
   width: 34px;
   height: 34px;
   margin: 0 10px 0 0;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -184,11 +174,7 @@ main {
   text-decoration: none;
   color: #3B5998;
   border: solid 1px #3B5998;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -197,8 +183,6 @@ main {
   background: #3B5998;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -219,11 +203,7 @@ main {
   background: white;
   color: #d64e80;
   border: solid 1px white;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
-  -moz-box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.6);
-  -webkit-box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.6);
   box-shadow: 2px 2px 2px rgba(200, 200, 200, 0.6);
 }
 #counter p span {
@@ -242,6 +222,12 @@ main {
 #btn_area {
   padding: 20px 0 50px;
 }
+#btn_area div {
+  width: 320px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
 
 #btn_style {
   width: 320px;
@@ -255,11 +241,7 @@ main {
   border: solid 1px #3B5998;
   cursor: pointer;
   background: transparent;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -268,34 +250,10 @@ main {
   background: #3B5998;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-/*
-#btn_style {
-  background: rgb(250,160,140);
-  width: 300px;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 20px 0 18px;
-  margin: 0 auto;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  @include border-radius(3px);
-  @include transition(all 0.3s ease);
-  &:hover {
-    @include opacity(0.8);
-    @include transition(all 0.3s ease);
-  }
-}
-*/
 /* ======================= QUESTION ====== */
 #question_wrap {
   width: 900px;
@@ -303,11 +261,7 @@ main {
   margin: 0 auto 50px;
   background: white;
   position: relative;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -moz-box-shadow: 1px 1px 2px #c8c8c8;
-  -webkit-box-shadow: 1px 1px 2px #c8c8c8;
   box-shadow: 1px 1px 2px #c8c8c8;
   color: #505050;
 }
@@ -344,44 +298,28 @@ main {
   display: block;
   color: white;
   vertical-align: middle;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
-  -moz-box-shadow: 1px 1px 2px #c8c8c8 inset;
-  -webkit-box-shadow: 1px 1px 2px #c8c8c8 inset;
   box-shadow: 1px 1px 2px #c8c8c8 inset;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #question_wrap .box label.yes {
   margin: 0 10px 0 0;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #question_wrap .box label.yes:hover {
   color: #d64e80;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #question_wrap .box label.no:hover {
   color: #015da6;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #question_wrap .box .checked {
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -433,8 +371,6 @@ main {
   background: white;
   background: rgba(255, 255, 255, 0.6);
   padding: 20px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 #reslut_prof_wrap .comment {
@@ -446,8 +382,6 @@ main {
 #reslut_prof_wrap .img {
   width: 260px;
   float: left;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
   padding: 10px 0 0 0;
@@ -455,8 +389,6 @@ main {
 #reslut_prof_wrap .img img {
   width: 100%;
   display: block;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -471,22 +403,16 @@ main {
   text-decoration: none;
   color: black;
   text-shadow: 1px 1px 0 white;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #result_parson_wrap .box a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #result_parson_wrap .box img {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   width: 100%;
   display: block;
@@ -538,15 +464,11 @@ main {
   border-bottom: solid 1px transparent;
   text-decoration: none;
   padding: 0 2px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #prom_text .inner p a:hover {
   border-bottom: solid 1px #d64e80;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }

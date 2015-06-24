@@ -16,7 +16,6 @@ class insert extends dbConnect {
 			mysql_close($this->con);//
 			exit;
 		} else {
-
 			return true;
 		}
 	}
