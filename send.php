@@ -64,6 +64,7 @@ $count_ts8_val[1] = 0;
 $count_ts9_val[1] = 0;
 $count_no_val[0] = 0;
 
+
 if (isset($_POST['ts1'])) {
 	$count_ts1_val = array_count_values($_POST['ts1']);
 	$type['type1'] = $count_ts1_val;
@@ -111,7 +112,7 @@ if (isset($_POST['ts9'])) {
 }
 if (isset($_POST['no'])) {
 	$count_no_val = array_count_values($_POST['no']);
-	$type['no'] = $count_no_val;
+	$type_no = $count_no_val;
 }
 
 $allCount = $count_ts1_val[1]
@@ -130,7 +131,6 @@ if($allCount!==5){
   header('Location: /question.php');
   exit;
 }
-
 
 //値順に並べる
 arsort($type);

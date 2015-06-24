@@ -34,7 +34,6 @@
     <p>残り<span></span>問</p>
   </div><!-- counter -->
     <form action="send.php" method="post">
-      
       <div class="box_wrap">
         <div class="box">
           <div class="radio">
