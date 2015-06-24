@@ -14,6 +14,27 @@ class login extend dbConnect{
 		
 	   }
 
+<<<<<<< HEAD
+=======
+			//セッションに保存されているユーザIDからユーザ情報を取得
+			$param['fb_id'] = $_SESSION["USERID"];
+
+			$update = new update;
+			//ユーザフラグ、ユーザ名、ユーザIDを取得、ユーザトークンを取得
+			$userInfo = $update->getUserInfo($param);
+
+			//ユーザ情報がなかったらログイン画面へ
+//			if ($userInfo['userExistFlg'] == false) {
+			if ($userInfo == false) {
+				header("Location: http://localhost/");
+				exit;
+			} else {
+				return $userInfo;
+			}
+		}
+
+	}
+>>>>>>> dfa87322988a23d54289b6540b392da8a1dc6eda
 
 
 	   }

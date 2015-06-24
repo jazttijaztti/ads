@@ -6,69 +6,52 @@ class update extends dbConnect {
 
 	public function getUserInfo($params) {
 		$fb_id = $params['fb_id'];
+    // 仮のfb_ID
 		$fb_id = 1;
-//		mysql_set_charset("UTF8",$this->con);
-//		$row = mysql_select_db($this->dbname,$this->con);
-
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
 		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
       $this->pdo = null;
 			exit;
 		} else {
-      $test = $this->pdo->prepare($sql);
-      $ret = $test->execute();
-      //この辺なおしてね
-      //var_dump($ret);
-      //exit;
-	    //$ret = $return[0];
-	    if ($fb_id == $ret['fb_id']) {
-	    	$return[0]['userExistFlg'] = true;
-	    } else {
-	    	$return[0]['userExistFlg'] = false;
-	    }
-	    return $return[0];
+      $pdo_pre = $this->pdo->prepare($sql);
+      $ret = $pdo_pre->execute();
+	    return $ret;
 		}
 
 	}
 	public function inputType($params) {
-
 		$fb_id = $params['fb_id'];
 		$type = $params['type'];
-		mysql_set_charset("UTF8",$this->con);
-		$row = mysql_select_db($this->dbname,$this->con);
-		$sql = "UPDATE user SET type = '".$type."'  WHERE fb_id = '$fb_id' ;";
-
-		if(!$res = mysql_query($sql)){
+		$sql = "UPDATE user SET type = '".$type. "' WHERE fb_id =".$fb_id;
+    
+		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-			mysql_close($con);
+      $this->pdo = null;
 			exit;
 		} else {
-			return true;
+      $pdo_pre = $this->pdo->prepare($sql);
+      $ret = $pdo_pre->execute();
+			return $ret;
 		}
-
-
-		return true;
 	}
 
 	public function updateToken($params) {
-
 			session_cache_limiter('none');
 			session_start();
 			$token = $params['token'];
 			$fb_id = $params['fbUserId'];
-			mysql_set_charset("UTF8",$this->con);
-			$row = mysql_select_db($this->dbname,$this->con);
-			$sql = "UPDATE user SET token = '$token' WHERE fb_id = '$fb_id' ;";
 
-			if(!$res = mysql_query($sql)){
+			$sql = "UPDATE user SET token = '$token' WHERE fb_id = '$fb_id' ;";
+			if(!$res = $this->pdo->query($sql)){
 				echo "SQL";
-				mysql_close($con);
+        $this->pdo = null;
 				return false;
 			} else {
-
+        $pdo_pre = $this->pdo->prepare($sql);
+        $ret = $pdo_pre->execute();
 				$_SESSION["USERID"] = $fb_id;
-				return true;
+				return $ret;
 			}
 	}
 }
