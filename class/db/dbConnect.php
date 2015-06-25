@@ -11,7 +11,7 @@ class dbConnect {
 		$this->dbname = "marryme";
 		$this->hostname = "localhost";
 		$this->userid = "root";
-		$this->passwd = "";
+		$this->passwd = "root";
 //DBに接続
 
     try {

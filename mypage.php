@@ -18,29 +18,32 @@ require_once('libralies/smarty/Smarty.class.php');
 
 $fb_id = $_SESSION['fb_id'];
 $user_name = $_SESSION['fb_name'];
-$param = array('fb_id' =>$fb_id , 'user_name' =>$user_name);
+$param = array('fb_id' =>$fb_id , 'fb_name' =>$user_name);
 $login = new login;
 $user_info = $login->is_user($fb_id);
 if ($user_info == false) {
    //DBにないから新規ユーザです。
-   $テーブルに挿入した結果 = $login->insert_new_user($param); 
+   $new_user = $login->insert_new_user($param); 
+var_dump($new_user);
+exit;
    //insertしてください
-   if ($テーブルに挿入した結果 == true) {
+   if ($new_user == true) {
        //ここで登録したユーザの情報を改めてもってくる
-         $ユーザの情報 = $login->get_user_info($fb_id);
+         $user_data = $login->getUserInfo($fb_id);
    } else {
         //ここに入ってくるならそもそもデーターベースに登録失敗してるからリダイレクト
-	header('Location: /');
+	header("Location: /index.php ");
    } 
 } else {
    //新規ユーザではない
    //$user_infoにすでに情報が入ってる
-}
+
 echo "a";
 exit;
+}
 
-$user_name = $user_info['user_name'];
-$fb_id     = $user_info['fb_id'];
+//$user_name = $user_info['user_name'];
+//$fb_id     = $user_info['fb_id'];
 
 $smarty = new Smarty;
 //$select = new Select;
