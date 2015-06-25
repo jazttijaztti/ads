@@ -24,10 +24,10 @@ class update extends dbConnect {
 		$fb_id = $params['fb_id'];
 		$type = $params['type'];
 		$sql = "UPDATE user SET type = '".$type. "' WHERE fb_id =".$fb_id;
-    
+
 		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-      $this->pdo = null;
+			$this->pdo = null;
 			exit;
 		} else {
       $pdo_pre = $this->pdo->prepare($sql);
