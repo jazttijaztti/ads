@@ -23,7 +23,7 @@
 <body class="animsition">
 
 {%include file='statics/common/include/header.php'%}
-  
+
 <main>
   
   <section id="question_wrap">
@@ -38,7 +38,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts1[]"  value="q1Y" {%valCheck%}>
+              Yes<input type="checkbox" name="ts1[]" value="q1Y" {%if $data=1%}checked="checked"{%/if%}>
             </label>
             <label class="no">
               No<input type="checkbox" name="ts1[]" value="q1N">

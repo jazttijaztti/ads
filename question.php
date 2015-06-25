@@ -34,18 +34,6 @@ $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
 $smarty->assign ('user_name', "808feet");
 
-$smarty->register_function('valCheck', 'sessionValCheck');
-
-function sessionValCheck($params, &$smarty){
-  if(empty($params['format'])) {
-    $format = "%b %e, %Y";
-  } else {
-    $format = $params['format'];
-  }
-  return strftime($format,time());
-}
-
 $error ="";
 $smarty->display('tpl/question.php');
 exit;
-
