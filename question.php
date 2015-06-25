@@ -1,4 +1,5 @@
 <?php
+session_start();
 $base_url = 'http://localhost';
 $statics_url = $base_url.'/statics/';
 require_once('libralies/smarty/Smarty.class.php');
@@ -10,7 +11,8 @@ require_once('class/db/select.php');
 require_once('class/db/insert.php');
 require_once('class/db/update.php');
 **/
-
+$name = $_SESSION['fb_name'];
+$fb_id = $_SESSION['fb_id'];
 
 header("Content-Type: text/html; charset=UTF-8");
 $smarty = new Smarty;
@@ -19,7 +21,9 @@ $smarty->left_delimiter  = "{%";
 $smarty->right_delimiter = "%}";
 $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
-$smarty->assign ('user_name', "808feet");
+$smarty->assign ('name', $name);
+$smarty->assign ('fb_id', $fb_id);
+
 $error ="";
 $smarty->display('tpl/question.php');
 exit;
