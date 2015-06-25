@@ -1,7 +1,13 @@
 <?php
 
-$age = 10;
-$message = ($age > 20) ? "大人！" : "子供！";
-echo $message;
+try{
+    $dbh = new PDO('mysql: host=localhost;dbname=jonah_data','root','root');
+      }catch(PDOException $e){
+	var_dump($e->getMessage());
+	exit;
+
+}
+
+echo "Success"
 
 ?>
