@@ -38,10 +38,10 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts1[]" value="1">
+              Yes<input type="checkbox" name="ts1[]" value="q1Y">
             </label>
             <label class="no">
-              No<input type="checkbox" name="no[]" value="0">
+              No<input type="checkbox" name="ts1[]" value="q1N">
             </label>
           </div><!-- radio --><div class="q_text">
             <p>常に自分自身を律して行動している。</p>
@@ -51,10 +51,10 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts3[]" value="1">
+              Yes<input type="checkbox" name="ts3[]" value="q2Y">
             </label>
             <label class="no">
-              No<input type="checkbox" name="no[]" value="0">
+              No<input type="checkbox" name="ts3[]" value="q2N">
             </label>
           </div><!-- radio --><div class="q_text">
             <p>環境や状況に応じて柔軟に対応できる。</p>
@@ -64,10 +64,10 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts5[]" value="1">
+              Yes<input type="checkbox" name="ts5[]" value="q3Y">
             </label>
             <label class="no">
-              No<input type="checkbox" name="no[]" value="0">
+              No<input type="checkbox" name="ts5[]" value="q3N">
             </label>
           </div><!-- radio --><div class="q_text">
             <p>分析や考察が好きだ。</p>
@@ -77,10 +77,10 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts7[]" value="1">
+              Yes<input type="checkbox" name="ts7[]" value="q4Y">
             </label>
             <label class="no">
-              No<input type="checkbox" name="no[]" value="0">
+              No<input type="checkbox" name="no[]" value="q4N">
             </label>
           </div><!-- radio --><div class="q_text">
             <p>できるだけ多くの選択肢や可能性を考えようとする。</p>
@@ -90,10 +90,10 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts9[]" value="1">
+              Yes<input type="checkbox" name="ts9[]" value="q5Y">
             </label>
             <label class="no">
-              No<input type="checkbox" name="no[]" value="0">
+              No<input type="checkbox" name="no[]" value="q5N">
             </label>
           </div><!-- radio --><div class="q_text">
             <p>面倒なものごとでも、きちんとおし進めることができる。</p>
