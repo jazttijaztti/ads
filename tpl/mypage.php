@@ -105,4 +105,3 @@
 </body>
 <script src="/statics/common/js/jquery.animsition.min.js"></script>
 <script src="/statics/common/js/animate_triger.js"></script>
-</html>

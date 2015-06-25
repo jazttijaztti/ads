@@ -38,7 +38,7 @@
         <div class="box">
           <div class="radio">
             <label class="yes">
-              Yes<input type="checkbox" name="ts1[]" value="q1Y">
+              Yes<input type="checkbox" name="ts1[]"  value="q1Y" {%valCheck%}>
             </label>
             <label class="no">
               No<input type="checkbox" name="ts1[]" value="q1N">

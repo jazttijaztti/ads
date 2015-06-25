@@ -14,14 +14,12 @@ require_once('class/db/insert.php');
 require_once('class/db/update.php');
 **/
 
-echo "<pre>";
-
-//var_dump($_SESSION);
-
 foreach($_SESSION as $key=>$val){
-  $test = $_SESSION[$key];
-  foreach($test as $key=>$val){
-    var_dump($test);  
+  $firstKey = $key;
+  if($firstKey!="USERID"){
+    foreach((array)$_SESSION[$firstKey] as $key=>$val){
+      echo $val;
+    }
   }
 }
 
@@ -35,6 +33,18 @@ $smarty->right_delimiter = "%}";
 $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
 $smarty->assign ('user_name', "808feet");
+
+$smarty->register_function('valCheck', 'sessionValCheck');
+
+function sessionValCheck($params, &$smarty){
+  if(empty($params['format'])) {
+    $format = "%b %e, %Y";
+  } else {
+    $format = $params['format'];
+  }
+  return strftime($format,time());
+}
+
 $error ="";
 $smarty->display('tpl/question.php');
 exit;
