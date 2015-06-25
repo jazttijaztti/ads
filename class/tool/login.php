@@ -15,7 +15,11 @@ class login extends dbConnect {
         }
        public function insert_new_user($arr) {
             //pdoのinsertを書く
-    	$stmt = $pdo -> prepare("INSERT INTO user (fb_id, name) VALUES (:fb_id, :name)");
+        //$arrは絶対に二つのキーを持つ配列でなければならない
+        //そのキーを二つの変数にばらす
+    	$stmt = $this->pdo -> prepare("INSERT INTO user (fb_id, name) VALUES (:fb_id, :name)");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':fb_id', $fb_id);
     	$stmt->execute();
            //return $ret;
        }

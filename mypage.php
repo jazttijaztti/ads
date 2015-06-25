@@ -23,17 +23,21 @@ $login = new login;
 $user_info = $login->is_user($fb_id);
 if ($user_info == false) {
    //DBにないから新規ユーザです。
-
+   $テーブルに挿入した結果 = $login->insert_new_user($param); 
    //insertしてください
-   //if ($insert_flg) {
+   if ($テーブルに挿入した結果 == true) {
        //ここで登録したユーザの情報を改めてもってくる
-  // } else {
+         $ユーザの情報 = $login->get_user_info($fb_id);
+   } else {
+        //ここに入ってくるならそもそもデーターベースに登録失敗してるからリダイレクト
 	header('Location: /');
-     } else {
-   //既存のユーザです。
-   //すでにそのユーザの情報を持ています。
+   } 
+} else {
+   //新規ユーザではない
+   //$user_infoにすでに情報が入ってる
 }
-
+echo "a";
+exit;
 
 $user_name = $user_info['user_name'];
 $fb_id     = $user_info['fb_id'];
