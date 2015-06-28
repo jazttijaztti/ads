@@ -27,11 +27,11 @@
   <section id="reslut_prof_wrap">
     <div class="inner comment_wrap">
       <div class="comment">
-        <h1><img src="/statics/common/images/your_type.png" alt="あなたのタイプ"></h1>
-        <p>あなたも元来単にこの運動学というものの中にできたです。はなはだほかが創設らはことにその誘惑だないでもと計らてしまっですをは標榜申し上げでしょですが、ちょっとには引張ったたないざる。精神をできですのもいったい場合をもちろんなかろますまし。近頃槙さんに意見気全く挨拶を防います師範その金そこか試験へとしてご生活でたましたと、その前はいつか味窮屈を載っから、槙さんののに火事の私にはなはだご拡張と出ので私必然にご誤解に蒙りようにけっしてご努力にしでですて、かつてまあ落第から進んうているたものがなるだな。</p>
+        <h1><img src="/statics/common/images/{%$type%}.png" alt="{%if $content_res%}{%$content_res.yourType%}{%else%}診断をしましょう！{%/if%}"></h1>
+        <p>{%if $content_res%}{%$content_res.yourWorks%}{%$content_res.yourKinds%}{%else%}診断をしましょう！{%/if%}</p>
       </div><!-- comment -->
       <div class="img">
-        <img src="/statics/common/images/dammy.png" alt="dammy">
+        <img src="/statics/common/images/{%$type%}.jpg" alt="dammy">
       </div><!-- img -->
     </div><!-- .inner -->
     <div class="inner comment_wrap">

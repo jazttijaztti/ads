@@ -23,16 +23,15 @@ $param = array('fb_id' =>$fb_id , 'fb_name' =>$user_name);
 $login = new login;
 $user_info = $login->is_user($fb_id);
 if ($user_info == false) {
+   $content_res = "";
+   $type ="";
    //DBにないから新規ユーザです。
    $new_user = $login->insert_new_user($param); 
    //insertしてください
     if ($new_user == true) {
         //ここで登録したユーザの情報を改めてもってくる
         $user_data = $login->getUserInfo($fb_id);
-        if ($user_data['type']) {
-            
-        } 
-
+        
    } else {
         //ここに入ってくるならそもそもデーターベースに登録失敗してるからリダイレクト
 	header("Location: /index.php ");
@@ -42,8 +41,6 @@ if ($user_info == false) {
     $type = $user_info["type"];
     $content = new content;
     $content_res = $content->getTypeContent($type);
-    var_dump($content_res);
-    exit;
 }
 
 $user_name = $user_info['name'];
@@ -56,6 +53,8 @@ $smarty->right_delimiter = "%}";
 $smarty->assign ('yaopa', $base_url);
 $smarty->assign ('statics_url', $statics_url);
 $smarty->assign ('name', $user_name);
+$smarty->assign ('content_res', $content_res);
+$smarty->assign ('type', $type);
 $smarty->assign ('fb_id',$fb_id);
 $smarty->display('tpl/mypage.php');
 
