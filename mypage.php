@@ -3,6 +3,7 @@ session_start();
 require_once('fb/facebook.php');
 //use Facebook\FacebookRequest;
 require_once('class/tool/login.php');
+require_once('class/tool/content.php');
 $base_url = 'http://localhost';
 $statics_url = $base_url.'/statics/';
 require_once('libralies/smarty/Smarty.class.php');
@@ -24,18 +25,25 @@ $user_info = $login->is_user($fb_id);
 if ($user_info == false) {
    //DBにないから新規ユーザです。
    $new_user = $login->insert_new_user($param); 
-var_dump($new_user);
-exit;
    //insertしてください
-   if ($new_user == true) {
-       //ここで登録したユーザの情報を改めてもってくる
-         $user_data = $login->getUserInfo($fb_id);
+    if ($new_user == true) {
+        //ここで登録したユーザの情報を改めてもってくる
+        $user_data = $login->getUserInfo($fb_id);
+        if ($user_data['type']) {
+            
+        } 
+
    } else {
         //ここに入ってくるならそもそもデーターベースに登録失敗してるからリダイレクト
 	header("Location: /index.php ");
    } 
 }else{
-$_SESSION['name'] = $user_info['name'];
+    $_SESSION['name'] = $user_info['name'];
+    $type = $user_info["type"];
+    $content = new content;
+    $content_res = $content->getTypeContent($type);
+    var_dump($content_res);
+    exit;
 }
 
 $user_name = $user_info['name'];
