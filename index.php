@@ -13,7 +13,7 @@ $smarty->right_delimiter = "%}";
 $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
 $smarty->assign ('login_btn', $login_btn);
-$smarty->assign ('user_name', "808feet");
+$smarty->assign ('name', "top");
 
 $smarty->display('tpl/index.php');
 exit;

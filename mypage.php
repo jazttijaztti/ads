@@ -34,16 +34,12 @@ exit;
         //ここに入ってくるならそもそもデーターベースに登録失敗してるからリダイレクト
 	header("Location: /index.php ");
    } 
-} else {
-   //新規ユーザではない
-   //$user_infoにすでに情報が入ってる
-
-echo "a";
-exit;
+}else{
+$_SESSION['name'] = $user_info['name'];
 }
 
-//$user_name = $user_info['user_name'];
-//$fb_id     = $user_info['fb_id'];
+$user_name = $user_info['name'];
+$fb_id     = $user_info['fb_id'];
 
 $smarty = new Smarty;
 //$select = new Select;
@@ -51,7 +47,7 @@ $smarty->left_delimiter  = "{%";
 $smarty->right_delimiter = "%}";
 $smarty->assign ('yaopa', $base_url);
 $smarty->assign ('statics_url', $statics_url);
-$smarty->assign ('user_name', $user_name);
+$smarty->assign ('name', $user_name);
 $smarty->assign ('fb_id',$fb_id);
 $smarty->display('tpl/mypage.php');
 
