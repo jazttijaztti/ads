@@ -31,7 +31,7 @@
         <p>{%if $content_res%}{%$content_res.yourWorks%}{%$content_res.yourKinds%}{%else%}診断をしましょう！{%/if%}</p>
       </div><!-- comment -->
       <div class="img">
-        <img src="/statics/common/images/{%$type%}.jpg" alt="dammy">
+        {%if $name=='top'%}{%else%}<img src="//graph.facebook.com/{%$fb_id%}/picture" alt="dammy">{%/if%}
       </div><!-- img -->
     </div><!-- .inner -->
     <div class="inner comment_wrap">

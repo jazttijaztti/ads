@@ -12,35 +12,33 @@ $smarty = new Smarty;
 //$reserve = new reserve;
 header("Content-Type: text/html; charset=UTF-8");
 
-$login = new login;
-$userInfo = $login->getUserInfo();
+$sessison_data = $_SESSION;
+$update = new update;
+$userInfo = $update->getUserInfo($sessison_data);
 $times = "";
 $name  = "";
 $error = "";
 
 $param = array();
 
-// 仮のfb_id
-$param['name'] = "808feet";
-$param['fb_id'] = "1";
-$param['fbEmail'] = "808feet@test.com";
-
-/**
-if ($_POST['fbName']) {
-	$param['name'] = strip_tags(htmlspecialchars($_POST['fb_name'], ENT_QUOTES, 'UTF-8'));
+if ($sessison_data['fb_name']) {
+	$param['name'] = strip_tags(htmlspecialchars($sessison_data['fb_name'], ENT_QUOTES, 'UTF-8'));
 } else {
 	$error = "fb";
 }
-if ($_POST['fb_id']) {
-	$param['fb_id'] = strip_tags(htmlspecialchars($_POST['fb_id'], ENT_QUOTES, 'UTF-8'));
+if ($sessison_data['fb_id']) {
+	$param['fb_id'] = strip_tags(htmlspecialchars($sessison_data['fb_id'], ENT_QUOTES, 'UTF-8'));
 } else {
 	$error = "fb";
 }
-if ($_POST['fbEmail']) {
-	$param['mail'] = strip_tags(htmlspecialchars($_POST['mail'], ENT_QUOTES, 'UTF-8'));
+/*
+if ($test['fbEmail']) {
+	$param['mail'] = strip_tags(htmlspecialchars($test['mail'], ENT_QUOTES, 'UTF-8'));
 } else {
 	$error = "fb";
 }
+*/
+/*
 if ($error != "") {
 	$url = "Location: /mypage.php?error=".$error;
 	header($url);
@@ -51,33 +49,6 @@ if ($error != "") {
 //質問のカテゴリー毎に配列を格納する
 //書き方の効率が悪いけれど次にどのレベルの人が見るかわからないので
 //極めて明示的に記述している
-
-
-echo "<pre>";
-//var_dump($_POST);
-
-/*
-
-function checkValue($key1,$key2){
-  if($_POST[$key1][$key2]=='q1Y'){
-    echo "yes";
-    $_SESSION[$key1][$key2]==true;
-    //return true;
-  }else {
-    echo "no";
-    $_SESSION[$key1][$key2]==false;
-    //return false;
-  }
-}
-*/
-
-function test($baseKey){  
-  foreach($_POST[$baseKey] as $key=>$val){
-      $_SESSION[$baseKey][$key] = $val;
-  //    $checkValue = checkValue('ts1',$key);
-    var_dump($_SESSION);
-  }
-}
 
 $type = array();
 $noSelectFlg = true;
@@ -92,84 +63,66 @@ $count_ts8_val[1] = 0;
 $count_ts9_val[1] = 0;
 $count_no_val[0] = 0;
 
+$_SESSION["qPost"] = $_POST;
 
 if (isset($_POST['ts1'])) {
-  test('ts1');
 	$count_ts1_val = array_count_values($_POST['ts1']);
 	$type['type1'] = $count_ts1_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts2'])) {
-  test('ts2');
 	$count_ts2_val = array_count_values($_POST['ts2']);
 	$type['type2'] = $count_ts2_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts3'])) {
-  test('ts3');
 	$count_ts3_val = array_count_values($_POST['ts3']);
 	$type['type3'] = $count_ts3_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts4'])) {
-  test('ts4');
 	$count_ts4_val = array_count_values($_POST['ts4']);
 	$type['type4'] = $count_ts4_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts5'])) {
-  test('ts5');
 	$count_ts5_val = array_count_values($_POST['ts5']);
 	$type['type5'] = $count_ts5_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts6'])) {
-  test('ts6');
 	$count_ts6_val = array_count_values($_POST['ts6']);
 	$type['type6'] = $count_ts6_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts7'])) {
-  test('ts7');
 	$count_ts7_val = array_count_values($_POST['ts7']);
 	$type['type7'] = $count_ts7_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts8'])) {
-  test('ts8');
 	$count_ts8_val = array_count_values($_POST['ts8']);
 	$type['type8'] = $count_ts8_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['ts9'])) {
-  test('ts9');
 	$count_ts9_val = array_count_values($_POST['ts9']);
 	$type['type9'] = $count_ts9_val;
 	$noSelectFlg = false;
 }
 if (isset($_POST['no'])) {
-  test('no');
 	$count_no_val = array_count_values($_POST['no']);
 	$type_no = $count_no_val;
 }
-/*
 
-$allCount = $count_ts1_val[1]
-            +$count_ts2_val[1]
-            +$count_ts3_val[1]
-            +$count_ts4_val[1]
-            +$count_ts5_val[1]
-            +$count_ts6_val[1]
-            +$count_ts7_val[1]
-            +$count_ts8_val[1]
-            +$count_ts9_val[1]
-            +$count_no_val[0];
 
 // バリテーション
+/*
 if($allCount!==5){
   header('Location: /question.php');
   exit;
 }
+*/
 
 //値順に並べる
 arsort($type);
@@ -203,6 +156,5 @@ $smarty->assign ('result', $result);
 
 header('Location: /result.php');
 exit;
-*/
 
 ?>

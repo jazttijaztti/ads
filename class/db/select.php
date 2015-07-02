@@ -2,19 +2,19 @@
 require_once('class/db/dbConnect.php');
 class select extends dbConnect {
 
-	public function getToken($fb_id) {
-		mysql_set_charset("UTF8",$this->con);
-		$row = mysql_select_db($this->dbname,$this->con);
+	public function getToken($fb_id){
+	//	$fb_id = $params['fb_id'];
 		$sql = "SELECT * FROM user WHERE fb_id = '$fb_id' ;";
-		if(!$res = mysql_query($sql)){
+		$db = $this->pdo->query($sql);
+		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
-			mysql_close($con);
+			$this->pdo = null;
 			exit;
 		} else {
-		  while($row = mysql_fetch_array($res)) {
+		  while($row = $db->fetch(PDO::FETCH_ASSOC)) {
 		       $return[] = $row;
-   		  }
-		  if (isset($return[0]['fb_id'])) {
+ 		  }
+		  if(isset($return[0]['fb_id'])) {
 		  	 return $return[0]['token'] ;
 		  } else {
 		  	 return false;
@@ -41,8 +41,8 @@ class select extends dbConnect {
 		  }
 		}
 	}
-	public function sameTypeFriend($listFb,$type) {
 
+	public function sameTypeFriend($listFb,$type) {
 		mysql_set_charset("UTF8",$this->con);
 		$row = mysql_select_db($this->dbname,$this->con);
 		$sql = "SELECT fb_id , name FROM user WHERE fb_id IN (".$listFb.") and type ='$type';";

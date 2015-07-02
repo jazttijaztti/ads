@@ -26,7 +26,7 @@ $smarty->left_delimiter  = "{%";
 $smarty->right_delimiter = "%}";
 $smarty->assign ('base_url', $base_url);
 $smarty->assign ('statics_url', $statics_url);
-$smarty->assign ('user_name', "808feet");
+//$smarty->assign ('user_name', "808feet");
 
 $smarty->assign ('yourType', $output_reslut["yourType"]);
 $smarty->assign ('yourWorks', $output_reslut["yourWorks"]);
@@ -37,3 +37,4 @@ $smarty->assign ('type', $output_reslut["type"]);
 $smarty->display('tpl/result.php');
 
 ?>
+

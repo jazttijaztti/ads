@@ -11,16 +11,16 @@ class dbConnect {
 		$this->dbname = "marryme";
 		$this->hostname = "localhost";
 		$this->userid = "root";
-		$this->passwd = "";
+		$this->passwd = "root";
 //DBに接続
 
     try {
       $this->pdo = new PDO("mysql:dbname=$this->dbname;host=$this->hostname","$this->userid","$this->passwd");
-	} catch (PDOException $e) {
-      	  //die($e->getMessage());
-	  var_dump($e->getMessage());
-          exit;
-        }
+  	} catch (PDOException $e) {
+  	  //die($e->getMessage());
+  	  var_dump($e->getMessage());
+      exit;
+    }
 
 //echo "Success!";
 //exit; 

@@ -1,35 +1,40 @@
 <?php
-
+session_start();
 require_once('libralies/smarty/Smarty.class.php');
 require_once('fb/facebook.php');
+require_once('class/db/update.php');
 require_once('class/tool/content.php');
 require_once('class/tool/login.php');
 require_once('class/db/select.php');
+
 
 $smarty = new Smarty;
 
 header("Content-Type: text/html; charset=UTF-8");
 
-$login = new login;
-$userInfo = $login->getUserInfo();
+$session_data = $_SESSION;
+
+$update = new update;
+$userInfo = $update->getUserInfo($session_data);
 $config = array(
       'appId'  => '838352262913026',
       'secret' => '28daeb117c66fbcb466ecf9727360dcd',
       'cookie' => true,
       'fileUpload' => true,
 );
-$facebook = new Facebook($config);
+
+//$facebook = new Facebook($config);
 
 //var_dump($_POST);
 //exit;
 
-
 //■セッションのFBIDからトークンを取得する
 
 $select = new select;
-$token  = $select->getToken($userInfo['fb_id']);
+//$token  = $select->getToken($userInfo['fb_id']);
+$token = $select->getToken($session_data['fb_id']);
+var_dump($token);
 $token_v = explode("=", $token)['1'];
-
 //■FEEDするパラメータを整形する
 $comment = $_POST['comment'];
 $sameTypeName = $_POST;
@@ -64,6 +69,7 @@ if($shareType){
                   "name" => 'OVERSEAS',
                   "link" => 'http://local.ads.com'))
   );
+
 
 //At the time of writing it is necessary to enable upload support in the Facebook SDK, you do this with the line:
   try {
@@ -107,6 +113,6 @@ if($shareType){
   $smarty->display('tpl/result.php');
   exit;
 } else {
-  header("Location: localhost/index.php");
+  //header("Location: localhost/index.php");
   exit;
 }

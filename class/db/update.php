@@ -6,8 +6,6 @@ class update extends dbConnect {
 
 	public function getUserInfo($params) {
 		$fb_id = $params['fb_id'];
-    // 仮のfb_ID
-		$fb_id = 1;
 		$sql = "SELECT * FROM user where fb_id=".$fb_id;
 		if(!$res = $this->pdo->query($sql)){
 			echo "SQL";
@@ -15,6 +13,7 @@ class update extends dbConnect {
 			exit;
 		} else {
       $pdo_pre = $this->pdo->prepare($sql);
+//      var_dump($pdo_pre);
       $ret = $pdo_pre->execute();
 	    return $ret;
 		}

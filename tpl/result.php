@@ -22,7 +22,6 @@
 {%include file='statics/common/include/header.php'%}
 
 <main>
-  
   <section id="reslut_prof_wrap">
     <div class="inner comment_wrap">
       <div class="comment">
@@ -37,7 +36,13 @@
       </div><!-- img -->
     </div><!-- .inner -->
   </section><!-- reslut_prof_wrap -->
-  
+
+    <div class="inner comment_wrap">
+      <section id="btn_area">
+        <a href="fbfeed.php" id="btn_style">結果をシェアする</a>
+      </section><!-- section_btn -->
+    </div><!-- .inner -->
+
   <section id="result_parson_wrap">
     <div class="good inner">
       <h1><img src="/statics/common/images/good.png" alt="相性のいいひと"></h1>
@@ -99,7 +104,6 @@
       <a href="/mypage.php" id="btn_style">マイページへ</a>
     </div><!-- inner -->
   </section><!-- section_btn -->
-
 
 </main>
   
